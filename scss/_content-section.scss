@@ -1,0 +1,33 @@
+// ========================================
+//  Content Section
+// ========================================
+
+.content-section {
+  font-family: var(--font-sans);
+  max-width: 640px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-5);
+  }
+
+  &__title {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    margin: 0;
+  }
+
+  &__title--danger {
+    color: var(--color-danger);
+  }
+
+  // ---- Stack multiple sections ----
+  & + & {
+    margin-top: var(--space-8);
+  }
+}

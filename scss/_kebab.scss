@@ -1,0 +1,66 @@
+// ========================================
+//  Kebab Menu
+// ========================================
+
+.admin-kebab {
+  position: relative;
+  flex-shrink: 0;
+
+  &__trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--height-control-sm);
+    height: var(--height-control-sm);
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: var(--cursor-action);
+    font-size: 20px;
+    color: var(--color-text-strong);
+    padding: 0;
+    transition: background var(--duration-normal) var(--ease);
+    line-height: 1;
+
+    &:hover { background: var(--color-bg-muted); }
+  }
+
+  &__menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 160px;
+    background: var(--color-bg);
+    border: var(--border-field);
+    border-radius: var(--radius-dropdown);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: var(--space-1-5) 0;
+    display: none;
+
+    &--open { display: block; }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-sans);
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: var(--cursor-action);
+    color: var(--color-text-strong);
+    text-decoration: none;
+    transition: background var(--duration-fast) var(--ease);
+
+    &:hover { background: var(--color-bg-page); }
+    &--danger { color: var(--color-danger); }
+  }
+
+  &__separator {
+    border-top: var(--border-field);
+    margin: var(--space-1-5) 0;
+  }
+}

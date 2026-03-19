@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — Icons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content">
+
+    <section id="icons" class="section">
+        <h1 class="section__title">Icons</h1>
+        <p class="section__desc">Stroke-based, styl Feather/Lucide. Sprite: <code>icons.svg</code>. Kolor przez <code>currentColor</code>.</p>
+
+        <h2 class="subsection__title">Użycie</h2>
+        <pre style="font-size: 13px; background: #fff; border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 16px 20px; margin-bottom: 32px; line-height: 1.6;"><code>&lt;svg width="18" height="18"&gt;&lt;use href="icons.svg#icon-grid"/&gt;&lt;/svg&gt;</code></pre>
+
+        <h2 class="subsection__title">Katalog</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff; cursor: pointer;" title="icon-grid">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">grid</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-users">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">users</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-briefcase">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">briefcase</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-layers">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">layers</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-check-square">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">check-square</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-plus-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">plus-circle</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-mail">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">mail</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-search">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">search</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-wifi">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0118 0"/><path d="M4 4a16 16 0 0118 0"/><circle cx="12" cy="20" r="1"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">wifi</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-file">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">file</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-folder">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">folder</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-tag">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">tag</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-message">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">message</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-edit">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">edit</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-trash">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">trash</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-settings">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">settings</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-image">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">image</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-home">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">home</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">menu</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-chevron-down">
+                <svg width="22" height="22" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">chevron-down</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-checkmark">
+                <svg width="22" height="22" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6L5 8.5L9.5 3.5"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">checkmark</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px 12px; border: 1px solid var(--color-border-light); border-radius: 8px; background: #fff;" title="icon-plus">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg>
+                <span style="font-size: 10px; color: var(--color-text-muted);">plus</span>
+            </div>
+        </div>
+
+        <h2 class="subsection__title">Specyfikacja</h2>
+        <table class="spec-table">
+            <tr><td>Sprite</td><td><code>icons.svg</code></td></tr>
+            <tr><td>Styl</td><td>Stroke-based (Feather/Lucide)</td></tr>
+            <tr><td>ViewBox</td><td><code>0 0 24 24</code> (główne), <code>0 0 12 12</code> (chevron, checkmark)</td></tr>
+            <tr><td>Stroke width</td><td><code>1.5px</code> (główne), <code>2px</code> (checkmark)</td></tr>
+            <tr><td>Render size</td><td><code>18×18</code> (sidebar), <code>20-22px</code> (standalone)</td></tr>
+            <tr><td>Color</td><td><code>currentColor</code></td></tr>
+        </table>
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('icons')</script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content">
+
+    <section id="layout" class="section">
+        <h1 class="section__title">Layout</h1>
+        <p class="section__desc">Struktura admina: sidebar (20%) + content (80%). Flex layout, sticky sidebar, full viewport height.</p>
+
+        <!-- DESKTOP -->
+        <article id="layout-desktop" class="component">
+            <h2 class="component__title">Desktop</h2>
+            <p style="color: var(--color-text-light); margin-bottom: 20px; font-size: 14px;">Viewport: <code>1280px – 1919px</code></p>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="padding: 32px; justify-content: center; width: 100%;">
+                    <div class="layout-schema" style="width: 100%; max-width: 680px;">
+                        <div class="layout-schema__label">viewport ~1440px</div>
+                        <div class="layout-schema__frame">
+                            <div class="layout-schema__sidebar">
+                                <div class="layout-schema__padding-h">
+                                    <span class="layout-schema__dim layout-schema__dim--h">40px</span>
+                                </div>
+                                <div class="layout-schema__sidebar-inner">
+                                    <div class="layout-schema__element layout-schema__element--logo">Logo</div>
+                                    <div class="layout-schema__element layout-schema__element--separator"></div>
+                                    <div class="layout-schema__element layout-schema__element--nav">CONTENT</div>
+                                    <div class="layout-schema__element layout-schema__element--item">Dzieła</div>
+                                    <div class="layout-schema__element layout-schema__element--item">Artyści</div>
+                                    <div class="layout-schema__element layout-schema__element--item">Teasery</div>
+                                    <div class="layout-schema__element layout-schema__element--separator"></div>
+                                    <div class="layout-schema__element layout-schema__element--nav">ZAMÓWIENIA</div>
+                                    <div class="layout-schema__element layout-schema__element--item">Zamówienia</div>
+                                </div>
+                                <div class="layout-schema__ratio">20%<br><span>min 180px</span></div>
+                            </div>
+                            <div class="layout-schema__content">
+                                <div class="layout-schema__content-padding">
+                                    <div class="layout-schema__dim layout-schema__dim--top">30px</div>
+                                    <div class="layout-schema__dim layout-schema__dim--left">40px</div>
+                                    <div class="layout-schema__content-inner">
+                                        <div class="layout-schema__topbar">
+                                            <span>Admin / Dzieła</span>
+                                            <span>admin@artpower.pl</span>
+                                        </div>
+                                        <div class="layout-schema__page-header">
+                                            <span class="layout-schema__page-title">Dzieła (4064)</span>
+                                            <span class="layout-schema__page-action">+ Dodaj</span>
+                                        </div>
+                                        <div class="layout-schema__placeholder">
+                                            <div class="layout-schema__row"></div>
+                                            <div class="layout-schema__row"></div>
+                                            <div class="layout-schema__row"></div>
+                                            <div class="layout-schema__row"></div>
+                                        </div>
+                                    </div>
+                                    <div class="layout-schema__dim layout-schema__dim--right">40px</div>
+                                    <div class="layout-schema__dim layout-schema__dim--bottom">30px</div>
+                                </div>
+                                <div class="layout-schema__ratio">80%<br><span>flex: 1</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Admin Layout — Desktop</h3>
+                    <table class="spec-table">
+                        <tr><td>Display</td><td><code>flex</code></td></tr>
+                        <tr><td>Min height</td><td><code>100vh</code></td></tr>
+                        <tr><td>Font size (layout)</td><td><code>0.9rem</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px;">Sidebar</h3>
+                    <table class="spec-table">
+                        <tr><td>Width</td><td><code>20%</code></td></tr>
+                        <tr><td>Min width</td><td><code>180px</code></td></tr>
+                        <tr><td>Flex shrink</td><td><code>0</code></td></tr>
+                        <tr><td>Position</td><td><code>sticky</code>, <code>top: 0</code></td></tr>
+                        <tr><td>Height</td><td><code>100vh</code></td></tr>
+                        <tr><td>Padding</td><td><code>20px 0</code></td></tr>
+                        <tr><td>Border right</td><td><code>1px solid #e3e8ee</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px;">Sidebar — wewnętrzne paddingi</h3>
+                    <table class="spec-table">
+                        <tr><td>Logo</td><td><code>0 40px 20px</code></td></tr>
+                        <tr><td>Sekcje (CONTENT, ZAMÓWIENIA...)</td><td><code>16px 40px 4px</code></td></tr>
+                        <tr><td>Menu items</td><td><code>8px 12px 8px 40px</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px;">Content</h3>
+                    <table class="spec-table">
+                        <tr><td>Flex</td><td><code>1</code></td></tr>
+                        <tr><td>Min width</td><td><code>0</code></td></tr>
+                        <tr><td>Padding</td><td><code>30px 40px</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px;">Topbar</h3>
+                    <table class="spec-table">
+                        <tr><td>Display</td><td><code>flex</code>, <code>space-between</code></td></tr>
+                        <tr><td>Margin bottom</td><td><code>16px</code></td></tr>
+                        <tr><td>Height</td><td>auto (flex)</td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <!-- WIDESCREEN -->
+        <article id="layout-widescreen" class="component">
+            <h2 class="component__title">Widescreen</h2>
+            <p style="color: var(--color-text-light); margin-bottom: 20px; font-size: 14px;">Viewport: <code>1920px+</code></p>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="padding: 32px; justify-content: center; width: 100%;">
+                    <div class="layout-schema layout-schema--wide" style="width: 100%; max-width: 780px;">
+                        <div class="layout-schema__label">viewport ~1920px+</div>
+                        <div class="layout-schema__frame">
+                            <div class="layout-schema__sidebar">
+                                <div class="layout-schema__padding-h">
+                                    <span class="layout-schema__dim layout-schema__dim--h">40px</span>
+                                </div>
+                                <div class="layout-schema__sidebar-inner">
+                                    <div class="layout-schema__element layout-schema__element--logo">Logo</div>
+                                    <div class="layout-schema__element layout-schema__element--separator"></div>
+                                    <div class="layout-schema__element layout-schema__element--nav">CONTENT</div>
+                                    <div class="layout-schema__element layout-schema__element--item">Dzieła</div>
+                                    <div class="layout-schema__element layout-schema__element--item">Artyści</div>
+                                    <div class="layout-schema__element layout-schema__element--item">Teasery</div>
+                                </div>
+                                <div class="layout-schema__ratio">20%<br><span>~384px</span></div>
+                            </div>
+                            <div class="layout-schema__content">
+                                <div class="layout-schema__content-padding">
+                                    <div class="layout-schema__dim layout-schema__dim--top">30px</div>
+                                    <div class="layout-schema__dim layout-schema__dim--left">40px</div>
+                                    <div class="layout-schema__content-inner">
+                                        <div class="layout-schema__topbar">
+                                            <span>Admin / Dzieła</span>
+                                            <span>admin@artpower.pl</span>
+                                        </div>
+                                        <div class="layout-schema__page-header">
+                                            <span class="layout-schema__page-title">Dzieła (4064)</span>
+                                            <span class="layout-schema__page-action">+ Dodaj</span>
+                                        </div>
+                                        <div class="layout-schema__placeholder">
+                                            <div class="layout-schema__row"></div>
+                                            <div class="layout-schema__row"></div>
+                                            <div class="layout-schema__row"></div>
+                                            <div class="layout-schema__row"></div>
+                                            <div class="layout-schema__row"></div>
+                                        </div>
+                                    </div>
+                                    <div class="layout-schema__dim layout-schema__dim--right">40px</div>
+                                    <div class="layout-schema__dim layout-schema__dim--bottom">30px</div>
+                                </div>
+                                <div class="layout-schema__ratio">80%<br><span>~1536px</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Widescreen — różnice vs Desktop</h3>
+                    <p style="margin-bottom: 12px;">Paddingi i proporcje pozostają identyczne. Sidebar i content skalują się proporcjonalnie dzięki <code>20%</code> / <code>flex: 1</code>.</p>
+                    <table class="spec-table">
+                        <tr><th>Element</th><th>Desktop (1440px)</th><th>Widescreen (1920px)</th></tr>
+                        <tr><td>Sidebar width</td><td><code>288px</code> (20%)</td><td><code>384px</code> (20%)</td></tr>
+                        <tr><td>Content width</td><td><code>1152px</code> (80%)</td><td><code>1536px</code> (80%)</td></tr>
+                        <tr><td>Content padding</td><td><code>30px 40px</code></td><td><code>30px 40px</code></td></tr>
+                        <tr><td>Sidebar inner padding</td><td><code>40px</code> L/R</td><td><code>40px</code> L/R</td></tr>
+                    </table>
+                    <p style="margin-top: 12px; font-size: 13px; color: var(--color-text-muted);">Na widescreen sidebar ma więcej oddechowej przestrzeni, a content area pozwala na szersze tabele i listy bez scrollowania.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- MOBILE -->
+        <article id="layout-mobile" class="component">
+            <h2 class="component__title">Mobile</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="padding: 32px; justify-content: center; width: 100%;">
+                    <div class="layout-schema layout-schema--mobile" style="max-width: 220px;">
+                        <div class="layout-schema__label">viewport ~375px</div>
+                        <div class="layout-schema__frame layout-schema__frame--mobile">
+                            <div class="layout-schema__mobile-header">
+                                <span>☰</span>
+                                <span>#admin</span>
+                                <span>⋮</span>
+                            </div>
+                            <div class="layout-schema__mobile-content">
+                                <div class="layout-schema__wip">
+                                    <div class="layout-schema__wip-icon">🚧</div>
+                                    <div class="layout-schema__wip-text">W przygotowaniu</div>
+                                    <div class="layout-schema__wip-desc">Mobile layout jest planowany.<br>Sidebar → hamburger menu overlay.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Mobile — planowane założenia</h3>
+                    <table class="spec-table">
+                        <tr><td>Viewport</td><td><code>&lt; 1024px</code></td></tr>
+                        <tr><td>Sidebar</td><td>Ukryty, hamburger overlay</td></tr>
+                        <tr><td>Content padding</td><td><code>16px</code> (mniejszy)</td></tr>
+                        <tr><td>Status</td><td><span class="admin-badge admin-badge--warning">TODO</span></td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <!-- CONTENT LAYOUTS -->
+        <article id="content-layouts" class="component">
+            <h2 class="component__title">Content Layouts</h2>
+            <p style="color: var(--color-text-light); margin-bottom: 24px; font-size: 14px;">Warianty zagospodarowania głównej części (content area). Sidebar może być zwinięty do ikon.</p>
+
+            <!-- Single column -->
+            <h3 class="subsection__title">Single column — lista / tabela</h3>
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="padding: 24px; justify-content: center; width: 100%;">
+                    <div style="display: flex; width: 100%; max-width: 600px; border: 2px solid var(--color-text); border-radius: 8px; overflow: hidden; min-height: 200px;">
+                        <div style="width: 48px; background: #fff; border-right: 1.5px solid var(--color-text); display: flex; flex-direction: column; align-items: center; padding: 10px 0; gap: 8px; flex-shrink: 0;">
+                            <div style="font-size: 10px; font-weight: 700;">W</div>
+                            <div style="height: 1px; background: var(--color-border-light); width: 70%; margin: 2px 0;"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-primary); opacity: 0.15;"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                        </div>
+                        <div style="flex: 1; background: #fff; padding: 16px 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <div style="font-size: 12px; font-weight: 700;">Produkty (128)</div>
+                                <div style="font-size: 8px; background: var(--color-primary); color: #fff; padding: 2px 6px; border-radius: 4px;">+ Dodaj</div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <div style="height: 20px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                <div style="height: 20px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                <div style="height: 20px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                <div style="height: 20px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                <div style="height: 20px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Single column</h3>
+                    <p style="margin-bottom: 12px;">Pełna szerokość contentu. Idealne dla list, tabel, dashboardów.</p>
+                    <table class="spec-table">
+                        <tr><td>Content width</td><td><code>100%</code></td></tr>
+                        <tr><td>Max width</td><td>brak (rozciąga się)</td></tr>
+                        <tr><td>Sidebar</td><td>Collapsed (ikony, <code>48px</code>) lub expanded (<code>20%</code>)</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Two column: content + aside -->
+            <h3 class="subsection__title">Content + aside — detail view</h3>
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="padding: 24px; justify-content: center; width: 100%;">
+                    <div style="display: flex; width: 100%; max-width: 600px; border: 2px solid var(--color-text); border-radius: 8px; overflow: hidden; min-height: 220px;">
+                        <div style="width: 48px; background: #fff; border-right: 1.5px solid var(--color-text); display: flex; flex-direction: column; align-items: center; padding: 10px 0; gap: 8px; flex-shrink: 0;">
+                            <div style="font-size: 10px; font-weight: 700;">W</div>
+                            <div style="height: 1px; background: var(--color-border-light); width: 70%; margin: 2px 0;"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-primary); opacity: 0.15;"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                        </div>
+                        <div style="flex: 1; background: #fff; display: flex;">
+                            <div style="flex: 2; padding: 16px 20px; border-right: 1px solid var(--color-border-light);">
+                                <div style="font-size: 12px; font-weight: 700; margin-bottom: 8px;">Ignition on — Let's play</div>
+                                <div style="height: 60px; background: var(--color-bg-muted); border-radius: 4px; margin-bottom: 8px;"></div>
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    <div style="height: 12px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                    <div style="height: 12px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                    <div style="height: 12px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px; width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div style="flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+                                <div style="font-size: 9px; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Meta</div>
+                                <div style="height: 10px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                <div style="height: 10px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                <div style="height: 10px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px; width: 50%;"></div>
+                                <div style="font-size: 9px; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 6px;">Akcje</div>
+                                <div style="display: flex; gap: 4px;">
+                                    <div style="flex: 1; height: 16px; background: var(--color-primary); border-radius: 4px;"></div>
+                                    <div style="flex: 1; height: 16px; border: 1px solid var(--color-border); border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Content + aside</h3>
+                    <p style="margin-bottom: 12px;">Widok detalu — edycja/podgląd po lewej, metadane i akcje po prawej.</p>
+                    <table class="spec-table">
+                        <tr><td>Main content</td><td><code>flex: 2</code> — formularz, opis, galeria</td></tr>
+                        <tr><td>Aside</td><td><code>flex: 1</code> — meta, status, przyciski</td></tr>
+                        <tr><td>Separator</td><td><code>1px solid --color-border-light</code></td></tr>
+                        <tr><td>Aside padding</td><td><code>--space-5</code></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <h3 class="subsection__title">Grid — karty / galeria</h3>
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="padding: 24px; justify-content: center; width: 100%;">
+                    <div style="display: flex; width: 100%; max-width: 600px; border: 2px solid var(--color-text); border-radius: 8px; overflow: hidden; min-height: 220px;">
+                        <div style="width: 48px; background: #fff; border-right: 1.5px solid var(--color-text); display: flex; flex-direction: column; align-items: center; padding: 10px 0; gap: 8px; flex-shrink: 0;">
+                            <div style="font-size: 10px; font-weight: 700;">W</div>
+                            <div style="height: 1px; background: var(--color-border-light); width: 70%; margin: 2px 0;"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                            <div style="width: 16px; height: 16px; border-radius: 3px; background: var(--color-primary); opacity: 0.15;"></div>
+                        </div>
+                        <div style="flex: 1; background: #fff; padding: 16px 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <div style="font-size: 12px; font-weight: 700;">Galeria</div>
+                                <div style="font-size: 8px; background: var(--color-primary); color: #fff; padding: 2px 6px; border-radius: 4px;">Upload</div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                                <div style="aspect-ratio: 1; background: var(--color-bg-muted); border-radius: 4px;"></div>
+                                <div style="aspect-ratio: 1; background: var(--color-bg-muted); border-radius: 4px;"></div>
+                                <div style="aspect-ratio: 1; background: var(--color-bg-muted); border-radius: 4px;"></div>
+                                <div style="aspect-ratio: 1; background: var(--color-bg-muted); border-radius: 4px;"></div>
+                                <div style="aspect-ratio: 1; background: var(--color-bg-muted); border-radius: 4px;"></div>
+                                <div style="aspect-ratio: 1; border: 2px dashed var(--color-border); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); font-size: 14px;">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Grid</h3>
+                    <p style="margin-bottom: 12px;">Siatka kart lub miniatur. Skaluje się z dostępną przestrzenią.</p>
+                    <table class="spec-table">
+                        <tr><td>Display</td><td><code>grid</code></td></tr>
+                        <tr><td>Columns</td><td><code>repeat(auto-fill, minmax(200px, 1fr))</code></td></tr>
+                        <tr><td>Gap</td><td><code>--space-5</code></td></tr>
+                        <tr><td>Card radius</td><td><code>--radius-card</code></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Collapsible sidebar -->
+            <h3 class="subsection__title">Collapsible sidebar</h3>
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="padding: 24px; justify-content: center; width: 100%; gap: 24px;">
+                    <!-- Expanded -->
+                    <div style="flex: 1; max-width: 280px;">
+                        <div style="font-size: 9px; font-weight: 500; color: var(--color-text-muted); text-align: center; margin-bottom: 6px;">EXPANDED</div>
+                        <div style="display: flex; border: 2px solid var(--color-text); border-radius: 8px; overflow: hidden; min-height: 180px;">
+                            <div style="width: 25%; background: #fff; border-right: 1.5px solid var(--color-text); display: flex; flex-direction: column; padding: 10px 0;">
+                                <div style="font-size: 10px; font-weight: 700; padding: 0 10px 8px;">White</div>
+                                <div style="height: 1px; background: var(--color-border-light);"></div>
+                                <div style="padding: 6px 10px; font-size: 8px; display: flex; align-items: center; gap: 4px;"><div style="width: 10px; height: 10px; border-radius: 2px; background: var(--color-bg-muted); flex-shrink: 0;"></div> Dzieła</div>
+                                <div style="padding: 6px 10px; font-size: 8px; display: flex; align-items: center; gap: 4px; font-weight: 600;"><div style="width: 10px; height: 10px; border-radius: 2px; background: var(--color-primary); opacity: 0.15; flex-shrink: 0;"></div> Artyści</div>
+                                <div style="padding: 6px 10px; font-size: 8px; display: flex; align-items: center; gap: 4px;"><div style="width: 10px; height: 10px; border-radius: 2px; background: var(--color-bg-muted); flex-shrink: 0;"></div> Teasery</div>
+                                <div style="margin-top: auto; padding: 8px 10px; border-top: 1px solid var(--color-border-light); font-size: 8px; color: var(--color-text-muted); display: flex; align-items: center; justify-content: flex-end;">
+                                    <span>«</span>
+                                </div>
+                            </div>
+                            <div style="flex: 1; background: #fff; padding: 12px;">
+                                <div style="display: flex; flex-direction: column; gap: 4px;">
+                                    <div style="height: 14px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                    <div style="height: 14px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                    <div style="height: 14px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Collapsed -->
+                    <div style="flex: 1; max-width: 280px;">
+                        <div style="font-size: 9px; font-weight: 500; color: var(--color-text-muted); text-align: center; margin-bottom: 6px;">COLLAPSED</div>
+                        <div style="display: flex; border: 2px solid var(--color-text); border-radius: 8px; overflow: hidden; min-height: 180px;">
+                            <div style="width: 36px; background: #fff; border-right: 1.5px solid var(--color-text); display: flex; flex-direction: column; align-items: center; padding: 10px 0; gap: 6px; flex-shrink: 0;">
+                                <div style="font-size: 8px; font-weight: 800;">W</div>
+                                <div style="height: 1px; background: var(--color-border-light); width: 60%;"></div>
+                                <div style="width: 14px; height: 14px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                                <div style="width: 14px; height: 14px; border-radius: 3px; background: var(--color-primary); opacity: 0.15;"></div>
+                                <div style="width: 14px; height: 14px; border-radius: 3px; background: var(--color-bg-muted);"></div>
+                                <div style="margin-top: auto; font-size: 8px; color: var(--color-text-muted);">»</div>
+                            </div>
+                            <div style="flex: 1; background: #fff; padding: 12px;">
+                                <div style="display: flex; flex-direction: column; gap: 4px;">
+                                    <div style="height: 14px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                    <div style="height: 14px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                    <div style="height: 14px; background: #fff; border: 1px solid var(--color-border-light); border-radius: 3px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Collapsible sidebar</h3>
+                    <p style="margin-bottom: 12px;">Sidebar zwija się do paska ikon, oddając przestrzeń contentowi.</p>
+                    <table class="spec-table">
+                        <tr><th>Stan</th><th>Sidebar width</th><th>Zawartość</th><th>Trigger</th></tr>
+                        <tr><td>Expanded</td><td><code>20%</code>, min <code>180px</code></td><td>Logo + ikony + labele</td><td>Przycisk <code>«</code> na dole</td></tr>
+                        <tr><td>Collapsed</td><td><code>48px</code></td><td>Logo initial + ikony</td><td>Przycisk <code>»</code> na dole</td></tr>
+                    </table>
+                    <table class="spec-table" style="margin-top: 12px;">
+                        <tr><td>Transition</td><td><code>width --duration-slow --ease</code></td></tr>
+                        <tr><td>Tooltip</td><td>Na hover ikony w collapsed — nazwa sekcji</td></tr>
+                        <tr><td>Persist</td><td><code>localStorage</code> — zapamiętaj stan</td></tr>
+                    </table>
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('layout')</script>
+</body>
+</html>

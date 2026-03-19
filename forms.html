@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dist/white.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content">
+
+    <section id="forms" class="section">
+        <h1 class="section__title">Forms</h1>
+        <p class="section__desc">Komponenty formularzy admina. Zaokrąglone krawędzie, niebieski akcent.</p>
+
+        <!-- BUTTONS -->
+        <article id="buttons" class="component">
+            <h2 class="component__title">Buttons</h2>
+
+            <!-- Base -->
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview">
+                    <button class="admin-btn admin-btn--primary">Dodaj dzieło</button>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Base button</h3>
+                    <p style="margin-bottom: 12px;">Wspólne style dla wszystkich wariantów.</p>
+                    <table class="spec-table">
+                        <tr><td>Font family</td><td><code>--font-sans</code></td></tr>
+                        <tr><td>Font size</td><td><code>--font-size-base</code> <small>(16px)</small></td></tr>
+                        <tr><td>Font weight</td><td><code>--font-weight-medium</code> <small>(500)</small></td></tr>
+                        <tr><td>Padding</td><td><code>--space-3</code> <code>--space-6</code> <small>(8px 24px)</small></td></tr>
+                        <tr><td>Min height</td><td><code>--height-control</code> <small>(44px)</small></td></tr>
+                        <tr><td>Border radius</td><td><code>--radius-button</code> <small>(12px)</small></td></tr>
+                        <tr><td>Border</td><td><code>none</code></td></tr>
+                        <tr><td>Cursor</td><td><code>--cursor-action</code></td></tr>
+                        <tr><td>Transition</td><td><code>--transition-control</code></td></tr>
+                        <tr><td>Line height</td><td><code>--leading-tight</code> <small>(1.3)</small></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Warianty kolorystyczne -->
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 16px;">
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <button class="admin-btn admin-btn--primary">Primary</button>
+                        <button class="admin-btn admin-btn--secondary">Secondary</button>
+                        <button class="admin-btn admin-btn--danger">Danger</button>
+                        <button class="admin-btn admin-btn--outline">Outline</button>
+                    </div>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <button class="admin-btn admin-btn--primary" disabled>Primary</button>
+                        <button class="admin-btn admin-btn--secondary" disabled>Secondary</button>
+                        <button class="admin-btn admin-btn--danger" disabled>Danger</button>
+                        <button class="admin-btn admin-btn--outline" disabled>Outline</button>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Warianty</h3>
+                    <table class="spec-table">
+                        <tr><th>Wariant</th><th>Background</th><th>Color</th><th>Hover</th></tr>
+                        <tr>
+                            <td>Primary</td>
+                            <td><code>--color-primary</code></td>
+                            <td><code>--color-bg</code></td>
+                            <td><code>--color-primary-hover</code></td>
+                        </tr>
+                        <tr>
+                            <td>Secondary</td>
+                            <td><code>--color-bg-muted</code></td>
+                            <td><code>--color-text</code></td>
+                            <td><code>--color-border-default</code></td>
+                        </tr>
+                        <tr>
+                            <td>Danger</td>
+                            <td><code>red-50</code></td>
+                            <td><code>--color-danger</code></td>
+                            <td>bg&nbsp;<code>--color-danger</code></td>
+                        </tr>
+                        <tr>
+                            <td>Outline</td>
+                            <td><code>--color-bg</code></td>
+                            <td><code>--color-text</code></td>
+                            <td>border&nbsp;<code>--color-text</code></td>
+                        </tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px;">Outline — border</h3>
+                    <table class="spec-table">
+                        <tr><td>Border</td><td><code>--border-control</code></td></tr>
+                        <tr><td>Hover border</td><td><code>--color-text</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px;">Disabled (wszystkie)</h3>
+                    <table class="spec-table">
+                        <tr><td>Opacity</td><td><code>--opacity-disabled</code></td></tr>
+                        <tr><td>Cursor</td><td><code>--cursor-disabled</code></td></tr>
+                        <tr><td>Pointer events</td><td><code>none</code></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rozmiary -->
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="align-items: center;">
+                    <button class="admin-btn admin-btn--primary admin-btn--small">Mały</button>
+                    <button class="admin-btn admin-btn--primary">Domyślny</button>
+                    <button class="admin-btn admin-btn--primary admin-btn--large">Duży</button>
+                    <button class="admin-btn admin-btn--primary admin-btn--full" style="margin-top: 8px;">Pełna szerokość</button>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Rozmiary</h3>
+                    <table class="spec-table">
+                        <tr><th>Rozmiar</th><th>Padding</th><th>Font size</th><th>Min height</th></tr>
+                        <tr><td>Small</td><td><code>--space-1-5</code> <code>--space-3</code> <small>(4px 8px)</small></td><td><code>--font-size-caption</code> <small>(13px)</small></td><td><code>--height-control-sm</code> <small>(32px)</small></td></tr>
+                        <tr><td>Default</td><td><code>--space-3</code> <code>--space-6</code> <small>(8px 24px)</small></td><td><code>--font-size-base</code> <small>(16px)</small></td><td><code>--height-control</code> <small>(44px)</small></td></tr>
+                        <tr><td>Large</td><td><code>--space-5</code> <code>--space-7</code> <small>(16px 32px)</small></td><td><code>--font-size-lg</code> <small>(17px)</small></td><td><code>--height-control-lg</code> <small>(50px)</small></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px;">Full width</h3>
+                    <p><code>width: 100%</code> — button zajmuje całą szerokość rodzica.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- INPUTS -->
+        <article id="inputs" class="component">
+            <h2 class="component__title">Inputs</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 16px; max-width: 400px;">
+                    <div class="admin-field">
+                        <label class="admin-field__label">Tytuł dzieła</label>
+                        <input type="text" class="admin-field__input" placeholder="Wpisz tytuł...">
+                    </div>
+                    <div class="admin-field">
+                        <label class="admin-field__label">Opis</label>
+                        <textarea class="admin-field__input admin-field__textarea" placeholder="Opis dzieła..."></textarea>
+                    </div>
+                    <div class="admin-field admin-field--error">
+                        <label class="admin-field__label">Cena</label>
+                        <input type="text" class="admin-field__input" value="abc">
+                        <span class="admin-field__error">Cena musi być liczbą</span>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Specyfikacja — Input</h3>
+                    <table class="spec-table">
+                        <tr><td>Font size</td><td><code>--font-size-md</code> <small>(15px)</small></td></tr>
+                        <tr><td>Font family</td><td><code>--font-sans</code></td></tr>
+                        <tr><td>Padding</td><td><code>--space-3</code> <code>--space-4</code> <small>(8px 12px)</small></td></tr>
+                        <tr><td>Border</td><td><code>--border-field</code></td></tr>
+                        <tr><td>Border radius</td><td><code>--radius-field</code> <small>(6px)</small></td></tr>
+                        <tr><td>Min height</td><td><code>--height-control</code> <small>(44px)</small></td></tr>
+                        <tr><td>Background</td><td><code>--color-bg</code></td></tr>
+                        <tr><td>Focus border</td><td><code>--color-primary</code></td></tr>
+                        <tr><td>Focus shadow</td><td><code>--focus-ring</code></td></tr>
+                        <tr><td>Error border</td><td><code>--color-danger</code></td></tr>
+                    </table>
+                    <h3 style="margin-top: 16px">Label</h3>
+                    <table class="spec-table">
+                        <tr><td>Font size</td><td><code>--font-size-sm</code> <small>(14px)</small></td></tr>
+                        <tr><td>Font weight</td><td><code>--font-weight-medium</code> <small>(500)</small></td></tr>
+                        <tr><td>Margin bottom</td><td><code>--space-2</code> <small>(6px)</small></td></tr>
+                        <tr><td>Color</td><td><code>--color-text</code></td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <!-- SELECTS -->
+        <article id="selects" class="component">
+            <h2 class="component__title">Selects</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 16px; max-width: 400px;">
+                    <div class="admin-field">
+                        <label class="admin-field__label">Technika</label>
+                        <div class="admin-select">
+                            <select class="admin-select__native">
+                                <option value="">Wybierz technikę...</option>
+                                <option>Olej na płótnie</option>
+                                <option>Akryl</option>
+                                <option>Akwarela</option>
+                                <option>Grafika</option>
+                            </select>
+                            <div class="admin-select__arrow">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin-field">
+                        <label class="admin-field__label">Kategoria</label>
+                        <div class="admin-select">
+                            <select class="admin-select__native">
+                                <option>Malarstwo</option>
+                                <option>Rzeźba</option>
+                                <option>Fotografia</option>
+                            </select>
+                            <div class="admin-select__arrow">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Specyfikacja — Select</h3>
+                    <table class="spec-table">
+                        <tr><td>Wygląd</td><td>Natywny <code>&lt;select&gt;</code> z custom arrow</td></tr>
+                        <tr><td>Padding</td><td><code>--space-3</code> <code>--space-7</code> <code>--space-3</code> <code>--space-4</code> <small>(8px 32px 8px 12px)</small></td></tr>
+                        <tr><td>Border</td><td><code>--border-field</code></td></tr>
+                        <tr><td>Border radius</td><td><code>--radius-field</code> <small>(6px)</small></td></tr>
+                        <tr><td>Font size</td><td><code>--font-size-md</code> <small>(15px)</small></td></tr>
+                        <tr><td>Min height</td><td><code>--height-control</code> <small>(44px)</small></td></tr>
+                        <tr><td>Background</td><td><code>--color-bg</code></td></tr>
+                        <tr><td>Arrow</td><td><code>chevron-down</code>, <code>--color-text-light</code></td></tr>
+                        <tr><td>Focus</td><td>Identyczny jak input</td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <!-- CHECKBOXES & TOGGLES -->
+        <article id="checkboxes" class="component">
+            <h2 class="component__title">Checkboxes &amp; Toggles</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 16px;">
+                    <label class="admin-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="admin-checkbox__mark"></span>
+                        <span class="admin-checkbox__text">Opublikowane</span>
+                    </label>
+                    <label class="admin-checkbox">
+                        <input type="checkbox">
+                        <span class="admin-checkbox__mark"></span>
+                        <span class="admin-checkbox__text">Wyróżnione na stronie głównej</span>
+                    </label>
+                    <div style="margin-top: 8px">
+                        <label class="admin-toggle">
+                            <input type="checkbox" checked>
+                            <span class="admin-toggle__track"></span>
+                            <span class="admin-toggle__text">Aktywny</span>
+                        </label>
+                    </div>
+                    <label class="admin-toggle">
+                        <input type="checkbox">
+                        <span class="admin-toggle__track"></span>
+                        <span class="admin-toggle__text">Widoczny w galerii</span>
+                    </label>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Checkbox</h3>
+                    <table class="spec-table">
+                        <tr><td>Rozmiar</td><td><code>--size-checkbox</code> <small>(18px)</small></td></tr>
+                        <tr><td>Border</td><td><code>--border-checkbox</code></td></tr>
+                        <tr><td>Border radius</td><td><code>--radius-checkbox</code> <small>(4px)</small></td></tr>
+                        <tr><td>Checked bg</td><td><code>--color-primary</code></td></tr>
+                        <tr><td>Checkmark</td><td>SVG, <code>--color-bg</code>, <code>--stroke-checkmark</code> <small>(2px)</small></td></tr>
+                    </table>
+                    <h3 style="margin-top: 16px">Toggle</h3>
+                    <table class="spec-table">
+                        <tr><td>Track</td><td><code>--size-toggle-w</code> × <code>--size-toggle-h</code> <small>(44×24px)</small></td></tr>
+                        <tr><td>Track radius</td><td><code>--radius-button</code> <small>(12px)</small></td></tr>
+                        <tr><td>Track off</td><td><code>--color-border</code></td></tr>
+                        <tr><td>Track on</td><td><code>--color-primary</code></td></tr>
+                        <tr><td>Thumb</td><td><code>--size-thumb</code> <small>(18px)</small>, <code>--color-bg</code>, circle</td></tr>
+                        <tr><td>Transition</td><td><code>--duration-slow</code> <code>--ease</code></td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <!-- CUSTOM SELECT -->
+        <article id="custom-select" class="component">
+            <h2 class="component__title">Custom Select</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 24px; max-width: 360px; padding: 32px 40px;">
+
+                    <!-- Closed -->
+                    <div class="admin-field">
+                        <label class="admin-field__label">Technika</label>
+                        <div class="custom-select" id="cs-demo-1">
+                            <button class="custom-select__trigger" onclick="toggleSelect('cs-demo-1')">
+                                <span>Olej na płótnie</span>
+                                <svg class="custom-select__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+                            </button>
+                            <div class="custom-select__dropdown">
+                                <div class="custom-select__options">
+                                    <div class="custom-select__option custom-select__option--selected">
+                                        Olej na płótnie
+                                        <svg class="custom-select__option-check" width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6L5 8.5L9.5 3.5"/></svg>
+                                    </div>
+                                    <div class="custom-select__option">Akryl</div>
+                                    <div class="custom-select__option">Akwarela</div>
+                                    <div class="custom-select__option">Pastel</div>
+                                    <div class="custom-select__option">Grafika</div>
+                                    <div class="custom-select__option">Technika mieszana</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Open with search and groups -->
+                    <div class="admin-field">
+                        <label class="admin-field__label">Artysta</label>
+                        <div class="custom-select custom-select--open" id="cs-demo-2">
+                            <button class="custom-select__trigger">
+                                <span class="custom-select__placeholder">Wybierz artystę...</span>
+                                <svg class="custom-select__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+                            </button>
+                            <div class="custom-select__dropdown">
+                                <div class="custom-select__search">
+                                    <input class="custom-select__search-input" type="text" placeholder="Szukaj..." value="lem">
+                                </div>
+                                <div class="custom-select__options">
+                                    <div class="custom-select__group-label">Polecani</div>
+                                    <div class="custom-select__option">
+                                        <div>
+                                            <div>Robert Lemke</div>
+                                            <div class="custom-select__option-desc">Berlin · 12 dzieł</div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-select__option">
+                                        <div>
+                                            <div>Anna Lemańska</div>
+                                            <div class="custom-select__option-desc">Warszawa · 8 dzieł</div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-select__separator"></div>
+                                    <div class="custom-select__group-label">Pozostali</div>
+                                    <div class="custom-select__option custom-select__option--disabled">
+                                        Brak wyników
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Custom Select</h3>
+                    <p style="margin-bottom: 12px;">Zastępuje natywny <code>&lt;select&gt;</code>. Search, grupy, opisy, ikony checkmark.</p>
+                    <table class="spec-table">
+                        <tr><td>Trigger</td><td>Identyczny wizualnie jak <code>.admin-field__input</code></td></tr>
+                        <tr><td>Dropdown</td><td><code>--radius-dropdown</code>, shadow <code>0 4px 16px</code>, z-index <code>50</code></td></tr>
+                        <tr><td>Search</td><td>Input w <code>--color-bg-page</code>, focus → <code>--color-bg</code></td></tr>
+                        <tr><td>Option hover</td><td><code>--color-bg-page</code></td></tr>
+                        <tr><td>Selected</td><td><code>--color-primary</code> + checkmark</td></tr>
+                        <tr><td>Group label</td><td>Uppercase, <code>--color-text-muted</code></td></tr>
+                        <tr><td>Max height</td><td><code>240px</code>, scroll</td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('forms')</script>
+<script>
+function toggleSelect(id) {
+    document.getElementById(id).classList.toggle('custom-select--open');
+}
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.custom-select')) {
+        document.querySelectorAll('.custom-select--open').forEach(function(el) {
+            if (!el.querySelector('.custom-select__search-input')) {
+                el.classList.remove('custom-select--open');
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

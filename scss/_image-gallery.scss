@@ -1,0 +1,111 @@
+// ========================================
+//  Image Gallery
+// ========================================
+
+.image-gallery {
+  display: flex;
+  gap: var(--space-5);
+  font-family: var(--font-sans);
+
+  // ---- Main image ----
+  &__main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__frame {
+    background: var(--color-bg-muted);
+    border-radius: var(--radius-card);
+    padding: var(--space-4);
+    position: relative;
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+  }
+
+  // ---- Sidebar meta ----
+  &__meta {
+    width: 180px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  &__label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    margin-bottom: var(--space-1-5);
+  }
+
+  &__value {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    word-break: break-all;
+  }
+
+  &__actions {
+    margin-top: auto;
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  // ---- Thumbnails ----
+  &__thumbs {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  &__thumb {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-field);
+    border: 2px solid transparent;
+    cursor: var(--cursor-action);
+    flex-shrink: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--active {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__add {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-field);
+    border: 2px dashed var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: var(--cursor-action);
+    flex-shrink: 0;
+    color: var(--color-text-muted);
+    background: none;
+    transition: var(--transition-control);
+
+    &:hover {
+      border-color: var(--color-text-muted);
+    }
+  }
+}

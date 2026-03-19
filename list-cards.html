@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — List Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content">
+
+    <section id="list-cards" class="section">
+        <h1 class="section__title">List Cards</h1>
+        <p class="section__desc">Wiersze listy w panelu admin — dzieła, artyści, zamówienia.</p>
+
+        <article id="list-row" class="component">
+            <h2 class="component__title">List Row</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 0; padding: 0; max-width: 100%; width: 100%;">
+                    <div class="artwork-list">
+                        <div class="artwork-list__item">
+                            <div class="artwork-list__thumb">
+                                <div style="width: 100%; height: 100%; background: #eaedf0; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #99a0a7; font-size: 11px;">IMG</div>
+                            </div>
+                            <div class="artwork-list__info">
+                                <a class="artwork-list__artist-name" href="#">Robert Lemke</a>
+                                <a class="artwork-list__title" href="#">Ignition on – Let's play</a>
+                            </div>
+                            <div class="artwork-list__meta">40×30 cm</div>
+                            <div class="artwork-list__meta">Rysunek</div>
+                            <div class="artwork-list__price">600 PLN</div>
+                            <div class="artwork-list__status">
+                                <span class="admin-badge admin-badge--success">FREE</span>
+                            </div>
+                            <div class="admin-kebab">
+                                <button class="admin-kebab__trigger">⋮</button>
+                            </div>
+                        </div>
+                        <div class="artwork-list__item">
+                            <div class="artwork-list__thumb">
+                                <div style="width: 100%; height: 100%; background: #f3e8e0; border-radius: 10px;"></div>
+                            </div>
+                            <div class="artwork-list__info">
+                                <a class="artwork-list__artist-name" href="#">Angelika Galus</a>
+                                <a class="artwork-list__title" href="#">Miniatura 74</a>
+                            </div>
+                            <div class="artwork-list__meta">20×20 cm</div>
+                            <div class="artwork-list__meta">Malarstwo</div>
+                            <div class="artwork-list__price">400 PLN</div>
+                            <div class="artwork-list__status">
+                                <span class="admin-badge admin-badge--success">FREE</span>
+                            </div>
+                            <div class="admin-kebab">
+                                <button class="admin-kebab__trigger">⋮</button>
+                            </div>
+                        </div>
+                        <div class="artwork-list__item artwork-list__item--inactive">
+                            <div class="artwork-list__thumb">
+                                <div style="width: 100%; height: 100%; background: #d4d4d4; border-radius: 10px;"></div>
+                            </div>
+                            <div class="artwork-list__info">
+                                <a class="artwork-list__artist-name" href="#">Jan Kowalski</a>
+                                <a class="artwork-list__title" href="#">Kompozycja abstrakcyjna</a>
+                            </div>
+                            <div class="artwork-list__meta">50×70 cm</div>
+                            <div class="artwork-list__meta">Malarstwo</div>
+                            <div class="artwork-list__price">2500 PLN</div>
+                            <div class="artwork-list__status">
+                                <span class="admin-badge admin-badge--danger">SOLD</span>
+                            </div>
+                            <div class="admin-kebab">
+                                <button class="admin-kebab__trigger">⋮</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Specyfikacja — Row</h3>
+                    <table class="spec-table">
+                        <tr><td>Display</td><td><code>flex</code>, <code>align-items: center</code></td></tr>
+                        <tr><td>Gap</td><td><code>24px</code></td></tr>
+                        <tr><td>Padding</td><td><code>12px 0</code></td></tr>
+                        <tr><td>Border bottom</td><td><code>1px solid #e3e8ee</code></td></tr>
+                        <tr><td>Last child border</td><td><code>none</code></td></tr>
+                        <tr><td>Hover</td><td><code>background: #fafafa</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px">Thumbnail</h3>
+                    <table class="spec-table">
+                        <tr><td>Rozmiar</td><td><code>120px × 50px</code></td></tr>
+                        <tr><td>Flex shrink</td><td><code>0</code></td></tr>
+                        <tr><td>Img border-radius</td><td><code>10px</code></td></tr>
+                        <tr><td>Object fit</td><td><code>cover</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px">Info block</h3>
+                    <table class="spec-table">
+                        <tr><td>Flex</td><td><code>1</code> (zajmuje resztę)</td></tr>
+                        <tr><td>Min width</td><td><code>0</code> (text-overflow)</td></tr>
+                    </table>
+                    <table class="spec-table" style="margin-top: 8px">
+                        <tr><th>Element</th><th>Font size</th><th>Weight</th><th>Color</th></tr>
+                        <tr><td>Artist name</td><td><code>1.2rem</code> (18px)</td><td><code>600</code></td><td><code>#0a0a0a</code></td></tr>
+                        <tr><td>Artwork title</td><td><code>0.9rem</code> (13.5px)</td><td><code>400</code></td><td>neutral gray</td></tr>
+                        <tr><td>Title hover</td><td>—</td><td>—</td><td><code>rgb(5, 109, 255)</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px">Meta kolumny</h3>
+                    <table class="spec-table">
+                        <tr><td>Width</td><td><code>100px</code></td></tr>
+                        <tr><td>Font size</td><td><code>0.9rem</code> (13.5px)</td></tr>
+                        <tr><td>Color</td><td><code>#0a0a0a</code></td></tr>
+                        <tr><td>White space</td><td><code>nowrap</code></td></tr>
+                        <tr><td>Flex shrink</td><td><code>0</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px">Cena</h3>
+                    <table class="spec-table">
+                        <tr><td>Font weight</td><td><code>600</code></td></tr>
+                        <tr><td>Text align</td><td><code>right</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px">Inactive state</h3>
+                    <table class="spec-table">
+                        <tr><td>Opacity</td><td><code>0.4</code></td></tr>
+                        <tr><td>Filter</td><td><code>grayscale(1)</code></td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <article id="kebab-menu" class="component">
+            <h2 class="component__title">Kebab Menu</h2>
+
+            <div class="example">
+                <div class="example__preview" style="gap: 40px; align-items: flex-start;">
+                    <div style="position: relative;">
+                        <button class="admin-kebab__trigger">⋮</button>
+                    </div>
+                    <div class="admin-kebab__menu admin-kebab__menu--static">
+                        <a class="admin-kebab__item" href="#">Edytuj</a>
+                        <a class="admin-kebab__item" href="#">Podgląd</a>
+                        <a class="admin-kebab__item" href="#">Duplikuj</a>
+                        <div class="admin-kebab__separator"></div>
+                        <button class="admin-kebab__item admin-kebab__item--danger">Usuń</button>
+                    </div>
+                </div>
+                <div class="example__spec">
+                    <h3>Trigger (⋮)</h3>
+                    <table class="spec-table">
+                        <tr><td>Rozmiar</td><td><code>32px × 32px</code></td></tr>
+                        <tr><td>Border radius</td><td><code>50%</code> (circle)</td></tr>
+                        <tr><td>Background</td><td><code>transparent</code></td></tr>
+                        <tr><td>Hover bg</td><td><code>#f0f0f0</code></td></tr>
+                        <tr><td>Font size</td><td><code>22px</code></td></tr>
+                        <tr><td>Color</td><td><code>#0a0a0a</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px">Dropdown</h3>
+                    <table class="spec-table">
+                        <tr><td>Position</td><td><code>absolute</code>, right: 0, top: 100%</td></tr>
+                        <tr><td>Min width</td><td><code>160px</code></td></tr>
+                        <tr><td>Background</td><td><code>#ffffff</code></td></tr>
+                        <tr><td>Border</td><td><code>1px solid #e3e8ee</code></td></tr>
+                        <tr><td>Border radius</td><td><code>10px</code></td></tr>
+                        <tr><td>Shadow</td><td><code>0 4px 12px rgba(0,0,0,0.1)</code></td></tr>
+                        <tr><td>Z-index</td><td><code>50</code></td></tr>
+                        <tr><td>Padding</td><td><code>4px 0</code></td></tr>
+                    </table>
+
+                    <h3 style="margin-top: 16px">Menu items</h3>
+                    <table class="spec-table">
+                        <tr><td>Padding</td><td><code>8px 16px</code></td></tr>
+                        <tr><td>Font size</td><td><code>14px</code></td></tr>
+                        <tr><td>Hover bg</td><td><code>#f5f5f5</code></td></tr>
+                        <tr><td>Danger color</td><td><code>#dc2626</code></td></tr>
+                        <tr><td>Separator</td><td><code>1px solid #e3e8ee</code>, margin <code>4px 0</code></td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('list-cards')</script>
+</body>
+</html>

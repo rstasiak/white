@@ -1,0 +1,119 @@
+// ========================================
+//  Product List
+// ========================================
+
+.product-list {
+  width: 100%;
+  background: var(--color-bg);
+  border: var(--border-field);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  font-family: var(--font-sans);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-5) var(--space-6);
+    border-bottom: var(--border-field);
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-strong);
+  }
+
+  &__count {
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-md);
+
+    th {
+      text-align: left;
+      padding: var(--space-3) var(--space-6);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-wide);
+      color: var(--color-text-muted);
+      border-bottom: var(--border-field);
+      background: var(--color-bg-page);
+    }
+
+    th:last-child, td:last-child { text-align: right; }
+
+    td {
+      padding: var(--space-4) var(--space-6);
+      border-bottom: 1px solid var(--color-border-light);
+      vertical-align: middle;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    tbody tr {
+      transition: var(--transition-control);
+      &:hover { background: var(--color-bg-page); }
+    }
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  &__thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-field);
+    background: var(--color-bg-muted);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-2xs);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-strong);
+  }
+
+  &__sku {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: 2px;
+  }
+
+  &__price {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-strong);
+  }
+
+  &__stock {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+
+    &--low {
+      color: var(--color-danger);
+      font-weight: var(--font-weight-medium);
+    }
+
+    &--sold {
+      color: var(--color-text-muted);
+    }
+  }
+
+  &__category {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+  }
+}

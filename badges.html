@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — Badges</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content">
+
+    <section id="badges" class="section">
+        <h1 class="section__title">Badges</h1>
+        <p class="section__desc">Statusy, etykiety i znaczniki używane w listach i tabelach.</p>
+
+        <article class="component">
+            <h2 class="component__title">Badge — warianty</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="align-items: center;">
+                    <span class="admin-badge admin-badge--success">FREE</span>
+                    <span class="admin-badge admin-badge--danger">SOLD</span>
+                    <span class="admin-badge admin-badge--warning">RESERVED</span>
+                    <span class="admin-badge admin-badge--info">DRAFT</span>
+                    <span class="admin-badge admin-badge--neutral">ARCHIVED</span>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Specyfikacja — Badge (outlined)</h3>
+                    <table class="spec-table">
+                        <tr><td>Font family</td><td><code>--font-sans</code></td></tr>
+                        <tr><td>Font size</td><td><code>--font-size-xs</code> <small>(12px)</small></td></tr>
+                        <tr><td>Font weight</td><td><code>--font-weight-semibold</code> <small>(600)</small></td></tr>
+                        <tr><td>Text transform</td><td><code>uppercase</code></td></tr>
+                        <tr><td>Letter spacing</td><td><code>--letter-spacing-wide</code> <small>(0.5px)</small></td></tr>
+                        <tr><td>Padding</td><td><code>--space-1</code> <code>--space-3-5</code> <small>(3px 10px)</small></td></tr>
+                        <tr><td>Border</td><td><code>--border-width-thick</code> <small>(1.5px)</small> solid</td></tr>
+                        <tr><td>Border radius</td><td><code>--radius-pill</code></td></tr>
+                        <tr><td>Line height</td><td><code>--leading-snug</code> <small>(1.4)</small></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="align-items: center;">
+                    <span class="admin-badge admin-badge--success">FREE</span>
+                    <span class="admin-badge admin-badge--success admin-badge--filled">FREE</span>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Outlined vs Filled</h3>
+                    <table class="spec-table">
+                        <tr><th>Styl</th><th>Border</th><th>Background</th><th>Color</th></tr>
+                        <tr><td>Outlined</td><td><code>--border-width-thick</code> solid <code>--color-success</code></td><td><code>green-50</code></td><td><code>--color-success</code></td></tr>
+                        <tr><td>Filled</td><td><code>none</code></td><td><code>--color-success</code></td><td><code>--color-bg</code></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="align-items: center;">
+                    <span class="admin-badge admin-badge--success admin-badge--sm">SM</span>
+                    <span class="admin-badge admin-badge--success">DEFAULT</span>
+                    <span class="admin-badge admin-badge--success admin-badge--lg">LARGE</span>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Rozmiary</h3>
+                    <table class="spec-table">
+                        <tr><th>Rozmiar</th><th>Padding</th><th>Font size</th></tr>
+                        <tr><td>Small</td><td><code>--space-0-5</code> <code>--space-2-5</code> <small>(2px 7px)</small></td><td><code>--font-size-2xs</code> <small>(10px)</small></td></tr>
+                        <tr><td>Default</td><td><code>--space-1</code> <code>--space-3-5</code> <small>(3px 10px)</small></td><td><code>--font-size-xs</code> <small>(12px)</small></td></tr>
+                        <tr><td>Large</td><td><code>--space-1-5</code> <code>--space-4-5</code> <small>(4px 14px)</small></td><td><code>--font-size-caption</code> <small>(13px)</small></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 12px;">
+                    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <span class="admin-badge admin-badge--success">FREE</span>
+                        <span style="font-size: 13px; color: var(--color-text-light);">success — <code>--color-success</code></span>
+                    </div>
+                    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <span class="admin-badge admin-badge--danger">SOLD</span>
+                        <span style="font-size: 13px; color: var(--color-text-light);">danger — <code>--color-danger</code></span>
+                    </div>
+                    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <span class="admin-badge admin-badge--warning">RESERVED</span>
+                        <span style="font-size: 13px; color: var(--color-text-light);">warning — <code>--color-warning</code></span>
+                    </div>
+                    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <span class="admin-badge admin-badge--info">DRAFT</span>
+                        <span style="font-size: 13px; color: var(--color-text-light);">info — <code>--color-primary</code></span>
+                    </div>
+                    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <span class="admin-badge admin-badge--neutral">ARCHIVED</span>
+                        <span style="font-size: 13px; color: var(--color-text-light);">neutral — <code>gray-500</code></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('badges')</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+// ========================================
+//  Fields (Input, Textarea, Select)
+// ========================================
+
+.admin-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+  }
+
+  &__input {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-md);
+    font-family: var(--font-sans);
+    border: var(--border-field);
+    border-radius: var(--radius-field);
+    min-height: var(--height-control);
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition: border-color var(--duration-normal) var(--ease), box-shadow var(--duration-normal) var(--ease);
+    outline: none;
+
+    &::placeholder { color: var(--color-text-muted); }
+
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: var(--focus-ring);
+    }
+  }
+
+  &__textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: var(--leading-normal);
+  }
+
+  &__error {
+    font-size: var(--font-size-caption);
+    color: var(--color-danger);
+    margin-top: var(--space-1-5);
+  }
+
+  &--error &__input {
+    border-color: var(--color-danger);
+
+    &:focus { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15); }
+  }
+}
+
+// ---- Select ----
+.admin-select {
+  position: relative;
+  width: 100%;
+
+  &__native {
+    width: 100%;
+    padding: var(--space-3) var(--space-7) var(--space-3) var(--space-4);
+    font-size: var(--font-size-md);
+    font-family: var(--font-sans);
+    border: var(--border-field);
+    border-radius: var(--radius-field);
+    min-height: var(--height-control);
+    background: var(--color-bg);
+    color: var(--color-text);
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: var(--cursor-action);
+    outline: none;
+    transition: border-color var(--duration-normal) var(--ease), box-shadow var(--duration-normal) var(--ease);
+
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: var(--focus-ring);
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-light);
+    pointer-events: none;
+    display: flex;
+  }
+}

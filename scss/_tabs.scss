@@ -1,0 +1,62 @@
+// ========================================
+//  Tabs
+// ========================================
+
+// ---- Underline ----
+.tabs-underline {
+  display: flex;
+  gap: var(--space-6);
+  border-bottom: 1px solid var(--color-border-light);
+  font-family: var(--font-sans);
+
+  &__item {
+    padding: var(--space-3) 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    cursor: var(--cursor-action);
+    transition: color var(--duration-normal) var(--ease), border-color var(--duration-normal) var(--ease);
+
+    &:hover { color: var(--color-text); }
+
+    &--active {
+      color: var(--color-text-strong);
+      border-bottom-color: var(--color-text-strong);
+    }
+  }
+}
+
+// ---- Pill ----
+.tabs-pill {
+  display: flex;
+  gap: var(--space-1-5);
+  font-family: var(--font-sans);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-button);
+  padding: var(--space-1-5);
+  width: fit-content;
+
+  &__item {
+    padding: var(--space-2) var(--space-5);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    border-radius: calc(var(--radius-button) - var(--space-1-5));
+    cursor: var(--cursor-action);
+    transition: all var(--duration-normal) var(--ease);
+
+    &:hover { color: var(--color-text); }
+
+    &--active {
+      color: var(--color-text-strong);
+      background: var(--color-bg);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+  }
+}

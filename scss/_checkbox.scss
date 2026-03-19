@@ -1,0 +1,96 @@
+// ========================================
+//  Checkbox & Toggle
+// ========================================
+
+.admin-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3-5);
+  cursor: var(--cursor-action);
+  font-size: var(--font-size-md);
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__mark {
+    width: var(--size-checkbox);
+    height: var(--size-checkbox);
+    border: var(--border-checkbox);
+    border-radius: var(--radius-checkbox);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-control);
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  input:checked + &__mark {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &::after {
+      content: '';
+      width: 5px;
+      height: 9px;
+      border: solid var(--color-bg);
+      border-width: 0 var(--stroke-checkmark) var(--stroke-checkmark) 0;
+      transform: rotate(45deg);
+      margin-top: -2px;
+    }
+  }
+
+  &__text { color: var(--color-text); }
+}
+
+.admin-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3-5);
+  cursor: var(--cursor-action);
+  font-size: var(--font-size-md);
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__track {
+    width: var(--size-toggle-w);
+    height: var(--size-toggle-h);
+    background: var(--color-border);
+    border-radius: var(--radius-button);
+    position: relative;
+    transition: background var(--duration-slow) var(--ease);
+    flex-shrink: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: var(--size-thumb);
+      height: var(--size-thumb);
+      background: var(--color-bg);
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform var(--duration-slow) var(--ease);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  input:checked + &__track {
+    background: var(--color-primary);
+
+    &::after { transform: translateX(20px); }
+  }
+
+  &__text { color: var(--color-text); }
+}

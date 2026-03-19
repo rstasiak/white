@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — Typography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content">
+
+    <section id="typography" class="section">
+        <h1 class="section__title">Typography</h1>
+        <p class="section__desc">Hierarchia typograficzna panelu administracyjnego.</p>
+
+        <h2 class="subsection__title">Hierarchia typograficzna</h2>
+        <table class="spec-table">
+            <tr><th>Element</th><th>Size</th><th>Weight</th><th>Color</th><th>Line height</th></tr>
+            <tr><td>H1</td><td><code>1.625rem</code> <small>(26px)</small></td><td><code>700</code></td><td><code>gray-900</code></td><td><code>--leading-tight</code></td></tr>
+            <tr><td>Subtitle</td><td><code>1rem</code> <small>(16px)</small></td><td><code>400</code></td><td><code>gray-500</code></td><td><code>--leading-normal</code></td></tr>
+            <tr><td>H2</td><td><code>1.25rem</code> <small>(20px)</small></td><td><code>600</code></td><td><code>gray-900</code></td><td><code>--leading-tight</code></td></tr>
+            <tr><td>H3</td><td><code>1.125rem</code> <small>(18px)</small></td><td><code>600</code></td><td><code>gray-900</code></td><td><code>--leading-tight</code></td></tr>
+            <tr><td>Body</td><td><code>1rem</code> <small>(16px)</small></td><td><code>400</code></td><td><code>gray-900</code></td><td><code>--leading-relaxed</code></td></tr>
+            <tr><td>Small</td><td><code>0.875rem</code> <small>(14px)</small></td><td><code>400</code></td><td><code>gray-500</code></td><td><code>--leading-normal</code></td></tr>
+            <tr><td>Caption</td><td><code>0.8125rem</code> <small>(13px)</small></td><td><code>500</code></td><td><code>gray-400</code></td><td><code>--leading-tight</code></td></tr>
+        </table>
+
+        <h2 class="subsection__title">Przegląd</h2>
+        <div class="example" style="flex-direction: column;">
+            <div class="example__preview" style="width: 100%; max-width: 100%; padding: 40px 48px;">
+                <div class="typo-preview">
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag">H1</span>
+                        <h1 class="typo-preview__h1">Dzieła (4064)</h1>
+                    </div>
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag typo-preview__tag--muted">Subtitle</span>
+                        <p class="typo-preview__subtitle">Lista wszystkich dzieł w galerii — malarstwo, rysunek, grafika, fotografia</p>
+                    </div>
+                    <div class="typo-preview__divider"></div>
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag">H2</span>
+                        <h2 class="typo-preview__h2">Robert Lemke</h2>
+                    </div>
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag typo-preview__tag--muted">Body</span>
+                        <p class="typo-preview__body">Artysta urodzony w 1975 roku w Berlinie. Jego prace łączą abstrakcję geometryczną z elementami street artu. Technika mieszana na płótnie, często w dużych formatach powyżej 150 cm.</p>
+                    </div>
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag typo-preview__tag--muted">Small</span>
+                        <p class="typo-preview__small">Ostatnia aktualizacja: 17 marca 2026 · 12 dzieł · 3 wystawy</p>
+                    </div>
+                    <div class="typo-preview__divider"></div>
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag">H3</span>
+                        <h3 class="typo-preview__h3">Ignition on – Let's play</h3>
+                    </div>
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag typo-preview__tag--muted">Body</span>
+                        <p class="typo-preview__body">Olej na płótnie, 40×30 cm. Praca z cyklu "Ignition", eksplorującego dynamikę ruchu i światła w przestrzeni miejskiej.</p>
+                    </div>
+                    <div class="typo-preview__line">
+                        <span class="typo-preview__tag typo-preview__tag--muted">Caption</span>
+                        <p class="typo-preview__caption">Rysunek · 40×30 cm · 600 PLN · <span style="color: #16a34a; font-weight: 600;">FREE</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('typography')</script>
+</body>
+</html>

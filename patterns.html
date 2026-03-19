@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — Patterns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dist/white.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content" style="max-width: 1280px;">
+
+    <section id="patterns" class="section">
+        <h1 class="section__title">Patterns</h1>
+        <p class="section__desc">Złożone wzorce UI do wykorzystania w panelach administracyjnych.</p>
+
+        <article id="tabs" class="component">
+            <h2 class="component__title">Tabs</h2>
+
+            <h3 class="subsection__title">Underline</h3>
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'tab-ul-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'tab-ul-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'tab-ul-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="tab-ul-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px; flex-direction: column; gap: 24px;">
+                        <div class="tabs-underline">
+                            <button class="tabs-underline__item tabs-underline__item--active">Wszystkie</button>
+                            <button class="tabs-underline__item">Aktywne</button>
+                            <button class="tabs-underline__item">Drafty</button>
+                            <button class="tabs-underline__item">Archiwum</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="tab-ul-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="tabs-underline"&gt;
+  &lt;button class="tabs-underline__item tabs-underline__item--active"&gt;Wszystkie&lt;/button&gt;
+  &lt;button class="tabs-underline__item"&gt;Aktywne&lt;/button&gt;
+  &lt;button class="tabs-underline__item"&gt;Drafty&lt;/button&gt;
+  &lt;button class="tabs-underline__item"&gt;Archiwum&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="tabs__panel" id="tab-ul-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_tabs.scss */
+
+.tabs-underline {
+  display: flex; gap: var(--space-6);
+  border-bottom: 1px solid var(--color-border-light);
+  font-family: var(--font-sans);
+}
+.tabs-underline__item {
+  padding: var(--space-3) 0;
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background: none; border: none;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  cursor: pointer;
+}
+.tabs-underline__item:hover { color: var(--color-text); }
+.tabs-underline__item--active {
+  color: var(--color-text-strong);
+  border-bottom-color: var(--color-text-strong);
+}</code></pre>
+            </div>
+
+            <h3 class="subsection__title">Pill</h3>
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'tab-pill-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'tab-pill-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'tab-pill-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="tab-pill-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px; flex-direction: column; gap: 24px;">
+                        <div class="tabs-pill">
+                            <button class="tabs-pill__item tabs-pill__item--active">Wszystkie</button>
+                            <button class="tabs-pill__item">Aktywne</button>
+                            <button class="tabs-pill__item">Drafty</button>
+                            <button class="tabs-pill__item">Archiwum</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="tab-pill-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="tabs-pill"&gt;
+  &lt;button class="tabs-pill__item tabs-pill__item--active"&gt;Wszystkie&lt;/button&gt;
+  &lt;button class="tabs-pill__item"&gt;Aktywne&lt;/button&gt;
+  &lt;button class="tabs-pill__item"&gt;Drafty&lt;/button&gt;
+  &lt;button class="tabs-pill__item"&gt;Archiwum&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="tabs__panel" id="tab-pill-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_tabs.scss */
+
+.tabs-pill {
+  display: flex; gap: var(--space-1-5);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-button);
+  padding: var(--space-1-5);
+  width: fit-content; font-family: var(--font-sans);
+}
+.tabs-pill__item {
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background: none; border: none;
+  border-radius: calc(var(--radius-button) - var(--space-1-5));
+  cursor: pointer;
+}
+.tabs-pill__item:hover { color: var(--color-text); }
+.tabs-pill__item--active {
+  color: var(--color-text-strong);
+  background: var(--color-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}</code></pre>
+            </div>
+
+            <details class="agent-instructions">
+                <summary>Instrukcje dla agenta</summary>
+                <pre><code># Tabs — scss/_tabs.scss
+
+Dwa warianty: .tabs-underline i .tabs-pill
+
+## Underline
+.tabs-underline
+  button.tabs-underline__item (--active)
+- Kreska 2px pod aktywnym, border-bottom na kontenerze
+- Gap: --space-6 między tabami
+
+## Pill
+.tabs-pill → kontener z --color-bg-muted, border-radius
+  button.tabs-pill__item (--active)
+- Aktywny: biały bg + subtle shadow
+- Wygląda jak segment control
+- width: fit-content — nie rozciąga się
+
+Uwagi:
+- Oba warianty używają &lt;button&gt;, nie &lt;a&gt;
+- Aktywny tab: --color-text-strong, reszta: --color-text-muted
+- JS: przełączanie klasy --active + pokazywanie paneli</code></pre>
+            </details>
+
+        </article>
+
+        <article id="sidebar" class="component">
+            <h2 class="component__title">Sidebar</h2>
+
+            <div class="tabs">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'sb-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'sb-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'sb-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="sb-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px; justify-content: center;">
+                        <div class="admin-sidebar-preview">
+                            <div class="admin-sidebar-preview__logo">#admin</div>
+                            <div class="admin-sidebar-preview__sep"></div>
+                            <div class="admin-sidebar-preview__group">
+                                <div class="admin-sidebar-preview__label">CONTENT</div>
+                                <a class="admin-sidebar-preview__item admin-sidebar-preview__item--active" href="#">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/></svg>
+                                    Dzieła
+                                </a>
+                                <a class="admin-sidebar-preview__item" href="#">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+                                    Artyści
+                                </a>
+                                <a class="admin-sidebar-preview__item" href="#">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                                    Teasery
+                                </a>
+                            </div>
+                            <div class="admin-sidebar-preview__sep"></div>
+                            <div class="admin-sidebar-preview__group">
+                                <div class="admin-sidebar-preview__label">ZAMÓWIENIA</div>
+                                <a class="admin-sidebar-preview__item" href="#">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+                                    Zamówienia
+                                </a>
+                            </div>
+                            <div class="admin-sidebar-preview__sep"></div>
+                            <div class="admin-sidebar-preview__group">
+                                <div class="admin-sidebar-preview__label">NARZĘDZIA</div>
+                                <a class="admin-sidebar-preview__item" href="#">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                                    Instrukcje AI
+                                </a>
+                                <a class="admin-sidebar-preview__item" href="#">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                                    Newsletter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="sb-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;aside class="admin-sidebar-preview"&gt;
+  &lt;div class="admin-sidebar-preview__logo"&gt;#admin&lt;/div&gt;
+  &lt;div class="admin-sidebar-preview__sep"&gt;&lt;/div&gt;
+
+  &lt;div class="admin-sidebar-preview__group"&gt;
+    &lt;div class="admin-sidebar-preview__label"&gt;CONTENT&lt;/div&gt;
+    &lt;a class="admin-sidebar-preview__item admin-sidebar-preview__item--active" href="#"&gt;
+      &lt;svg ...&gt;&lt;/svg&gt; Dzieła
+    &lt;/a&gt;
+    &lt;a class="admin-sidebar-preview__item" href="#"&gt;
+      &lt;svg ...&gt;&lt;/svg&gt; Artyści
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class="admin-sidebar-preview__sep"&gt;&lt;/div&gt;
+  &lt;!-- więcej grup... --&gt;
+&lt;/aside&gt;</code></pre>
+            </div>
+            <div class="tabs__panel" id="sb-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* styles.css — Admin Sidebar Preview */
+
+.admin-sidebar-preview { width: 260px; background: #fff; border: var(--border-field); font-family: var(--font-sans); padding: 20px 0; }
+.admin-sidebar-preview__logo { font-size: 1.25rem; font-weight: 800; color: var(--color-text-strong); padding: 0 40px 20px; }
+.admin-sidebar-preview__sep { border-top: var(--border-field); }
+.admin-sidebar-preview__group { padding: 8px 0; }
+.admin-sidebar-preview__label { font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-text-muted); padding: 16px 40px 4px; }
+.admin-sidebar-preview__item { display: flex; align-items: center; gap: 12px; padding: 8px 12px 8px 40px; font-size: 0.9375rem; color: var(--color-text-strong); text-decoration: none; }
+.admin-sidebar-preview__item svg { color: var(--color-text-muted); }
+.admin-sidebar-preview__item:hover { background: var(--color-bg-page); }
+.admin-sidebar-preview__item--active { font-weight: 700; }
+.admin-sidebar-preview__item--active svg { color: var(--color-text-strong); }</code></pre>
+            </div>
+
+            <details class="agent-instructions">
+                <summary>Instrukcje dla agenta</summary>
+                <pre><code># Sidebar — styles.css → .admin-sidebar-preview
+
+aside.admin-sidebar-preview
+  .admin-sidebar-preview__logo → nazwa aplikacji, 800 weight
+  .admin-sidebar-preview__sep → edge-to-edge separator
+  .admin-sidebar-preview__group → sekcja menu
+    .admin-sidebar-preview__label → uppercase, muted, CONTENT/ZAMÓWIENIA/etc
+    a.admin-sidebar-preview__item (--active) → ikona SVG 18x18 + label
+      svg → stroke: currentColor, 1.5px
+
+Uwagi:
+- Width: 260px (preview), w produkcji 20% z min 180px
+- Ikony: 18x18, stroke-width 1.5, kolor --color-text-muted (active: --color-text-strong)
+- Active item: font-weight 700, bez tła — bold only
+- Collapsible: width 48px, label ukryty, ikony wycentrowane, toggle « / » na dole
+- Persist: localStorage key sidebar-collapsed
+- Hover: background --color-bg-page</code></pre>
+            </details>
+
+        </article>
+
+        <article id="product-list" class="component">
+            <h2 class="component__title">Product List</h2>
+
+            <div class="tabs">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'pl-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'pl-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'pl-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="pl-preview">
+            <div class="product-list">
+                <div class="product-list__header">
+                    <div class="product-list__title">Produkty <span class="product-list__count">(10)</span></div>
+                    <button class="admin-btn admin-btn--primary">Dodaj produkt</button>
+                </div>
+                <table class="product-list__table">
+                    <thead>
+                        <tr>
+                            <th>Produkt</th>
+                            <th>Kategoria</th>
+                            <th>Stan</th>
+                            <th>Status</th>
+                            <th>Cena</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Koszulka oversize — Concrete</div>
+                                        <div class="product-list__sku">SKU-1001</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Odzież</td>
+                            <td class="product-list__stock">124 szt.</td>
+                            <td><span class="admin-badge admin-badge--success">Active</span></td>
+                            <td class="product-list__price">149 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Plakat A2 — Brutalist Tower</div>
+                                        <div class="product-list__sku">SKU-1002</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Plakaty</td>
+                            <td class="product-list__stock">58 szt.</td>
+                            <td><span class="admin-badge admin-badge--success">Active</span></td>
+                            <td class="product-list__price">79 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Kubek ceramiczny — Slab</div>
+                                        <div class="product-list__sku">SKU-1003</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Ceramika</td>
+                            <td class="product-list__stock product-list__stock--low">3 szt.</td>
+                            <td><span class="admin-badge admin-badge--warning">Low stock</span></td>
+                            <td class="product-list__price">65 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Torba canvas — Mono Grid</div>
+                                        <div class="product-list__sku">SKU-1004</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Akcesoria</td>
+                            <td class="product-list__stock">42 szt.</td>
+                            <td><span class="admin-badge admin-badge--success">Active</span></td>
+                            <td class="product-list__price">89 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Notebook A5 — Dot Grid</div>
+                                        <div class="product-list__sku">SKU-1005</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Papeteria</td>
+                            <td class="product-list__stock">210 szt.</td>
+                            <td><span class="admin-badge admin-badge--success">Active</span></td>
+                            <td class="product-list__price">39 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Print limitowany — Signal No. 7</div>
+                                        <div class="product-list__sku">SKU-1006</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Plakaty</td>
+                            <td class="product-list__stock product-list__stock--sold">0 szt.</td>
+                            <td><span class="admin-badge admin-badge--danger">Sold out</span></td>
+                            <td class="product-list__price">320 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Bluza hoodie — Raw Edge</div>
+                                        <div class="product-list__sku">SKU-1007</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Odzież</td>
+                            <td class="product-list__stock">17 szt.</td>
+                            <td><span class="admin-badge admin-badge--success">Active</span></td>
+                            <td class="product-list__price">249 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Świeca sojowa — Béton</div>
+                                        <div class="product-list__sku">SKU-1008</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Dom</td>
+                            <td class="product-list__stock product-list__stock--low">5 szt.</td>
+                            <td><span class="admin-badge admin-badge--warning">Low stock</span></td>
+                            <td class="product-list__price">55 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Czapka beanie — Struktura</div>
+                                        <div class="product-list__sku">SKU-1009</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Akcesoria</td>
+                            <td class="product-list__stock">86 szt.</td>
+                            <td><span class="admin-badge admin-badge--info">Draft</span></td>
+                            <td class="product-list__price">69 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-list__cell">
+                                    <div class="product-list__thumb">IMG</div>
+                                    <div>
+                                        <div class="product-list__name">Podstawka pod laptop — Plateau</div>
+                                        <div class="product-list__sku">SKU-1010</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-list__category">Dom</td>
+                            <td class="product-list__stock">31 szt.</td>
+                            <td><span class="admin-badge admin-badge--neutral">Archived</span></td>
+                            <td class="product-list__price">189 PLN</td>
+                            <td><div class="admin-kebab"><button class="admin-kebab__trigger">⋮</button></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div><!-- /pl-preview -->
+            <div class="tabs__panel" id="pl-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="product-list"&gt;
+  &lt;div class="product-list__header"&gt;
+    &lt;div class="product-list__title"&gt;Produkty &lt;span class="product-list__count"&gt;(10)&lt;/span&gt;&lt;/div&gt;
+    &lt;button class="admin-btn admin-btn--primary"&gt;Dodaj produkt&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;table class="product-list__table"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th&gt;Produkt&lt;/th&gt;&lt;th&gt;Kategoria&lt;/th&gt;&lt;th&gt;Stan&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Cena&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;div class="product-list__cell"&gt;
+            &lt;div class="product-list__thumb"&gt;&lt;img src="..." alt=""&gt;&lt;/div&gt;
+            &lt;div&gt;
+              &lt;div class="product-list__name"&gt;Nazwa produktu&lt;/div&gt;
+              &lt;div class="product-list__sku"&gt;SKU-1001&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td class="product-list__category"&gt;Kategoria&lt;/td&gt;
+        &lt;td class="product-list__stock"&gt;124 szt.&lt;/td&gt;
+        &lt;td&gt;&lt;span class="admin-badge admin-badge--success"&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td class="product-list__price"&gt;149 PLN&lt;/td&gt;
+        &lt;td&gt;&lt;div class="admin-kebab"&gt;...&lt;/div&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="tabs__panel" id="pl-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_product-list.scss */
+
+.product-list { width: 100%; background: var(--color-bg); border: var(--border-field); border-radius: var(--radius-card); overflow: hidden; font-family: var(--font-sans); }
+.product-list__header { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) var(--space-6); border-bottom: var(--border-field); }
+.product-list__title { font-size: 1.25rem; font-weight: var(--font-weight-bold); color: var(--color-text-strong); }
+.product-list__count { font-weight: var(--font-weight-regular); color: var(--color-text-muted); }
+
+.product-list__table { width: 100%; border-collapse: collapse; font-size: var(--font-size-md); }
+.product-list__table th { text-align: left; padding: var(--space-3) var(--space-6); font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); text-transform: uppercase; letter-spacing: var(--letter-spacing-wide); color: var(--color-text-muted); border-bottom: var(--border-field); background: var(--color-bg-page); }
+.product-list__table td { padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--color-border-light); vertical-align: middle; }
+.product-list__table tbody tr:hover { background: var(--color-bg-page); }
+
+.product-list__cell { display: flex; align-items: center; gap: var(--space-4); }
+.product-list__thumb { width: 48px; height: 48px; border-radius: var(--radius-field); background: var(--color-bg-muted); }
+.product-list__name { font-weight: var(--font-weight-semibold); color: var(--color-text-strong); }
+.product-list__sku { font-size: var(--font-size-xs); color: var(--color-text-muted); }
+.product-list__price { font-weight: var(--font-weight-semibold); color: var(--color-text-strong); }
+.product-list__stock { font-size: var(--font-size-sm); color: var(--color-text-light); }
+.product-list__stock--low { color: var(--color-danger); }
+.product-list__category { font-size: var(--font-size-sm); color: var(--color-text-light); }</code></pre>
+            </div>
+            <details class="agent-instructions">
+                <summary>Instrukcje dla agenta</summary>
+                <pre><code># Product List — scss/_product-list.scss → .product-list
+
+.product-list
+  .product-list__header
+    .product-list__title > span.product-list__count
+    button.admin-btn--primary
+  table.product-list__table
+    thead > tr > th
+    tbody > tr
+      td > .product-list__cell > .product-list__thumb + .product-list__name + .product-list__sku
+      td.product-list__category
+      td.product-list__stock (--low, --sold)
+      td > admin-badge
+      td.product-list__price
+      td > admin-kebab
+
+Uwagi:
+- Ostatnia kolumna: text-align: right
+- Stock: --low (czerwony), --sold (muted)
+- Hover wiersza: background --color-bg-page
+- Thumb: 48x48, w produkcji &lt;img&gt; z object-fit: cover</code></pre>
+            </details>
+
+        </article>
+
+        <article id="image-gallery" class="component">
+            <h2 class="component__title">Image Gallery</h2>
+
+
+            <!-- Landscape -->
+            <h3 class="subsection__title">Landscape</h3>
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'land-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'land-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'land-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="land-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px;">
+                        <div class="image-gallery" style="max-width: 640px;">
+                            <div class="image-gallery__main">
+                                <div class="image-gallery__frame">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23e8d5b7'/%3E%3Cstop offset='40%25' stop-color='%23c4956a'/%3E%3Cstop offset='70%25' stop-color='%238b6914'/%3E%3Cstop offset='100%25' stop-color='%232d4a1a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='800' height='600'/%3E%3Ctext x='400' y='310' text-anchor='middle' fill='rgba(255,255,255,0.7)' font-size='14' font-family='sans-serif'%3Elandscape%3C/text%3E%3C/svg%3E" alt="Landscape">
+                                    <span class="image-gallery__badge"><span class="admin-badge admin-badge--info admin-badge--sm">MAIN</span></span>
+                                </div>
+                            </div>
+                            <div class="image-gallery__meta">
+                                <div><div class="image-gallery__label">Nazwa pliku</div><div class="image-gallery__value">pejzaz-toskanski.jpg</div></div>
+                                <div><div class="image-gallery__label">Wymiary</div><div class="image-gallery__value">2400 × 1800 px</div></div>
+                                <div><div class="image-gallery__label">Pozycja</div><div class="image-gallery__value">1 / 4</div></div>
+                                <div class="image-gallery__actions">
+                                    <button class="admin-btn admin-btn--outline admin-btn--small" style="flex:1">Zamień</button>
+                                    <button class="admin-btn admin-btn--danger admin-btn--small" style="flex:1">Usuń</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-gallery__thumbs" style="max-width: 640px;">
+                            <div class="image-gallery__thumb image-gallery__thumb--active" style="background: linear-gradient(135deg, #e8d5b7, #2d4a1a);"></div>
+                            <div class="image-gallery__thumb" style="background: linear-gradient(180deg, #4a6fa5, #1a3a5c);"></div>
+                            <div class="image-gallery__thumb" style="background: linear-gradient(45deg, #8b4513, #d2691e);"></div>
+                            <button class="image-gallery__add"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="land-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px 32px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_image-gallery.scss */
+
+.image-gallery {
+  display: flex;
+  gap: var(--space-5);
+  font-family: var(--font-sans);
+}
+.image-gallery__main { flex: 1; min-width: 0; }
+
+.image-gallery__frame {
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  position: relative;
+}
+.image-gallery__frame img {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+  margin: 0 auto;
+}
+
+.image-gallery__badge { position: absolute; top: var(--space-3); left: var(--space-3); }
+
+.image-gallery__meta {
+  width: 180px; flex-shrink: 0;
+  display: flex; flex-direction: column; gap: var(--space-4);
+}
+.image-gallery__label {
+  font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted); text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide); margin-bottom: var(--space-1-5);
+}
+.image-gallery__value { font-size: var(--font-size-sm); color: var(--color-text); word-break: break-all; }
+.image-gallery__actions { margin-top: auto; display: flex; gap: var(--space-3); }
+
+.image-gallery__thumbs { display: flex; gap: var(--space-3); margin-top: var(--space-5); }
+.image-gallery__thumb {
+  width: 72px; height: 72px; border-radius: var(--radius-field);
+  border: 2px solid transparent; cursor: pointer; flex-shrink: 0; overflow: hidden;
+}
+.image-gallery__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.image-gallery__thumb--active { border-color: var(--color-primary); }
+
+.image-gallery__add {
+  width: 72px; height: 72px; border-radius: var(--radius-field);
+  border: 2px dashed var(--color-border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--color-text-muted); background: none;
+}
+.image-gallery__add:hover { border-color: var(--color-text-muted); }</code></pre>
+            </div>
+            <div class="tabs__panel" id="land-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="image-gallery"&gt;
+  &lt;div class="image-gallery__main"&gt;
+    &lt;div class="image-gallery__frame"&gt;
+      &lt;img src="photo.jpg" alt="..."&gt;
+      &lt;span class="image-gallery__badge"&gt;
+        &lt;span class="admin-badge admin-badge--info admin-badge--sm"&gt;MAIN&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="image-gallery__meta"&gt;
+    &lt;div&gt;
+      &lt;div class="image-gallery__label"&gt;Nazwa pliku&lt;/div&gt;
+      &lt;div class="image-gallery__value"&gt;photo.jpg&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- ...więcej metadanych... --&gt;
+    &lt;div class="image-gallery__actions"&gt;
+      &lt;button class="admin-btn admin-btn--outline admin-btn--small"&gt;Zamień&lt;/button&gt;
+      &lt;button class="admin-btn admin-btn--danger admin-btn--small"&gt;Usuń&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="image-gallery__thumbs"&gt;
+  &lt;div class="image-gallery__thumb image-gallery__thumb--active"&gt;
+    &lt;img src="thumb1.jpg"&gt;
+  &lt;/div&gt;
+  &lt;div class="image-gallery__thumb"&gt;
+    &lt;img src="thumb2.jpg"&gt;
+  &lt;/div&gt;
+  &lt;button class="image-gallery__add"&gt;+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <!-- Portrait -->
+            <h3 class="subsection__title">Portrait</h3>
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'port-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'port-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'port-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="port-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px;">
+                        <div class="image-gallery" style="max-width: 640px;">
+                            <div class="image-gallery__main">
+                                <div class="image-gallery__frame">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='667'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%231a1a2e'/%3E%3Cstop offset='25%25' stop-color='%2316213e'/%3E%3Cstop offset='50%25' stop-color='%230f3460'/%3E%3Cstop offset='75%25' stop-color='%23533483'/%3E%3Cstop offset='100%25' stop-color='%23e94560'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='400' height='667'/%3E%3Ctext x='200' y='340' text-anchor='middle' fill='rgba(255,255,255,0.7)' font-size='14' font-family='sans-serif'%3Eportrait%3C/text%3E%3C/svg%3E" alt="Portrait">
+                                    <span class="image-gallery__badge"><span class="admin-badge admin-badge--info admin-badge--sm">MAIN</span></span>
+                                </div>
+                            </div>
+                            <div class="image-gallery__meta">
+                                <div><div class="image-gallery__label">Nazwa pliku</div><div class="image-gallery__value">skupienie-ii.jpg</div></div>
+                                <div><div class="image-gallery__label">Wymiary</div><div class="image-gallery__value">1200 × 2000 px</div></div>
+                                <div><div class="image-gallery__label">Pozycja</div><div class="image-gallery__value">1 / 2</div></div>
+                                <div class="image-gallery__actions">
+                                    <button class="admin-btn admin-btn--outline admin-btn--small" style="flex:1">Zamień</button>
+                                    <button class="admin-btn admin-btn--danger admin-btn--small" style="flex:1">Usuń</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-gallery__thumbs" style="max-width: 640px;">
+                            <div class="image-gallery__thumb image-gallery__thumb--active" style="background: linear-gradient(180deg, #1a1a2e, #e94560);"></div>
+                            <div class="image-gallery__thumb" style="background: linear-gradient(180deg, #2c3e50, #e74c3c);"></div>
+                            <button class="image-gallery__add"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="port-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px 32px; overflow-x: auto; line-height: 1.7;"><code>/* Identyczny CSS jak w przykładzie Landscape */
+/* scss/_image-gallery.scss — te same klasy, */
+/* orientacja obrazka obsługiwana automatycznie */
+/* przez max-width: 100% + margin: 0 auto */</code></pre>
+            </div>
+            <div class="tabs__panel" id="port-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;!-- Identyczny markup jak landscape --&gt;
+&lt;!-- Orientacja obrazka nie wymaga żadnych dodatkowych klas. --&gt;
+&lt;!-- CSS (object-fit: contain + margin: 0 auto) automatycznie --&gt;
+&lt;!-- centruje portret i pokazuje szare tło po bokach. --&gt;</code></pre>
+            </div>
+
+            <details class="agent-instructions">
+                <summary>Instrukcje dla agenta</summary>
+                <pre><code># Image Gallery — scss/_image-gallery.scss → .image-gallery
+
+.image-gallery
+  .image-gallery__main
+    .image-gallery__frame → kontener na &lt;img&gt;, padding, bg muted, radius
+      img → max-width: 100%, max-height: 400px, margin: 0 auto
+      .image-gallery__badge → position: absolute, top-left
+  .image-gallery__meta → width: 180px, sidebar z metadanymi
+    .image-gallery__label + .image-gallery__value (powtarzane)
+    .image-gallery__actions → margin-top: auto, dociska do dołu
+.image-gallery__thumbs → poza .image-gallery, pod spodem
+  .image-gallery__thumb (--active) → 72x72, border 2px solid/transparent
+  .image-gallery__add → button, 2px dashed
+
+Uwagi:
+- Thumby ZAWSZE border: 2px (solid lub transparent) — unika przeskoku layoutu
+- Badge: admin-badge admin-badge--info admin-badge--sm
+- Przycisk dodawania: &lt;button&gt;, nie &lt;div&gt;</code></pre>
+            </details>
+
+        </article>
+
+        <article id="page-header" class="component">
+            <h2 class="component__title">Page Header</h2>
+
+
+            <h3 class="subsection__title">Detail</h3>
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'ph-det-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'ph-det-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'ph-det-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="ph-det-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px;">
+                        <div class="page-header">
+                            <div>
+                                <h1 class="page-header__title">Skupienie II</h1>
+                                <a href="#" class="page-header__back">← Dzieła</a>
+                            </div>
+                            <div class="page-header__actions">
+                                <button class="admin-btn admin-btn--outline admin-btn--small">Zapisz</button>
+                                <button class="admin-btn admin-btn--danger admin-btn--small">Usuń</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="ph-det-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="page-header"&gt;
+  &lt;div&gt;
+    &lt;h1 class="page-header__title"&gt;Skupienie II&lt;/h1&gt;
+    &lt;a href="/dziela" class="page-header__back"&gt;← Dzieła&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="page-header__actions"&gt;
+    &lt;button class="admin-btn admin-btn--outline admin-btn--small"&gt;Zapisz&lt;/button&gt;
+    &lt;button class="admin-btn admin-btn--danger admin-btn--small"&gt;Usuń&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="tabs__panel" id="ph-det-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_page-header.scss */
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+}
+.page-header__title {
+  font-size: 1.625rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-strong);
+  line-height: var(--leading-tight);
+}
+.page-header__count { font-weight: var(--font-weight-regular); color: var(--color-text-muted); }
+.page-header__back {
+  font-size: var(--font-size-sm); color: var(--color-text-muted);
+  text-decoration: none; display: inline-flex;
+  align-items: center; gap: var(--space-2); margin-top: var(--space-2);
+}
+.page-header__subtitle { font-size: var(--font-size-sm); color: var(--color-text-muted); margin: var(--space-2) 0 0; }
+.page-header__actions { display: flex; gap: var(--space-3); align-items: center; flex-shrink: 0; }</code></pre>
+            </div>
+
+            <h3 class="subsection__title">List</h3>
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'ph-list-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'ph-list-html')">HTML</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="ph-list-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px;">
+                        <div class="page-header">
+                            <div>
+                                <h1 class="page-header__title">Dzieła <span class="page-header__count">(4064)</span></h1>
+                                <p class="page-header__subtitle">Lista wszystkich dzieł w galerii</p>
+                            </div>
+                            <div class="page-header__actions">
+                                <button class="admin-btn admin-btn--primary admin-btn--small">+ Dodaj dzieło</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="ph-list-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="page-header"&gt;
+  &lt;div&gt;
+    &lt;h1 class="page-header__title"&gt;Dzieła &lt;span class="page-header__count"&gt;(4064)&lt;/span&gt;&lt;/h1&gt;
+    &lt;p class="page-header__subtitle"&gt;Lista wszystkich dzieł w galerii&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="page-header__actions"&gt;
+    &lt;button class="admin-btn admin-btn--primary admin-btn--small"&gt;+ Dodaj dzieło&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <h3 class="subsection__title">Minimal</h3>
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px;">
+                    <div class="page-header">
+                        <div>
+                            <h1 class="page-header__title">Ustawienia</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <details class="agent-instructions">
+                <summary>Instrukcje dla agenta</summary>
+                <pre><code># Page Header — scss/_page-header.scss → .page-header
+
+.page-header
+  div
+    h1.page-header__title → zawsze
+      span.page-header__count → opcjonalny "(123)"
+    a.page-header__back → opcjonalny "← Powrót", POD tytułem
+    p.page-header__subtitle → opcjonalny opis
+  .page-header__actions → opcjonalny
+    button.admin-btn--small
+
+Uwagi:
+- Back link POD tytułem, nie nad
+- Przyciski: align-items: flex-start (góra tytułu), zawsze --small
+- 3 warianty: Detail, List, Minimal — pomiń opcjonalne elementy</code></pre>
+            </details>
+
+        </article>
+
+        <article id="description-list" class="component">
+            <h2 class="component__title">Description List</h2>
+
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'dl-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'dl-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'dl-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="dl-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px;">
+                        <div class="description-list" style="max-width: 640px;">
+                            <div class="description-list__header">
+                                <h3 class="description-list__title">Ignition on — Let's play</h3>
+                                <button class="admin-btn admin-btn--outline admin-btn--small">Edytuj</button>
+                            </div>
+                            <dl class="description-list__rows">
+                                <div class="description-list__row"><dt class="description-list__label">Artysta</dt><dd class="description-list__value">Robert Lemke</dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Kategoria</dt><dd class="description-list__value"><a href="#">Rysunek</a></dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Wymiary</dt><dd class="description-list__value">40 × 30 cm</dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Status</dt><dd class="description-list__value"><span class="admin-badge admin-badge--success">FREE</span></dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Cena</dt><dd class="description-list__value description-list__value--bold">600 PLN</dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Tagi</dt><dd class="description-list__value"><div class="description-list__tags"><span class="admin-badge admin-badge--neutral admin-badge--sm">abstrakcja</span><span class="admin-badge admin-badge--neutral admin-badge--sm">street art</span><span class="admin-badge admin-badge--neutral admin-badge--sm">mixed media</span></div></dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Opis</dt><dd class="description-list__value description-list__value--long">Praca z cyklu "Ignition", eksplorującego dynamikę ruchu i światła w przestrzeni miejskiej. Olej na płótnie, technika mieszana.</dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Kolekcja</dt><dd class="description-list__value description-list__value--muted">Brak</dd></div>
+                                <div class="description-list__row"><dt class="description-list__label">Dodano</dt><dd class="description-list__value">17 marca 2026 <span class="description-list__date-time">· 14:32</span></dd></div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="dl-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="description-list"&gt;
+  &lt;div class="description-list__header"&gt;
+    &lt;h3 class="description-list__title"&gt;Tytuł&lt;/h3&gt;
+    &lt;button class="admin-btn admin-btn--outline admin-btn--small"&gt;Edytuj&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;dl class="description-list__rows"&gt;
+    &lt;div class="description-list__row"&gt;
+      &lt;dt class="description-list__label"&gt;Label&lt;/dt&gt;
+      &lt;dd class="description-list__value"&gt;Value&lt;/dd&gt;
+    &lt;/div&gt;
+    &lt;!-- Modyfikatory: --bold, --muted, --long --&gt;
+    &lt;div class="description-list__row"&gt;
+      &lt;dt class="description-list__label"&gt;Tagi&lt;/dt&gt;
+      &lt;dd class="description-list__value"&gt;
+        &lt;div class="description-list__tags"&gt;
+          &lt;span class="admin-badge admin-badge--neutral admin-badge--sm"&gt;tag&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/dd&gt;
+    &lt;/div&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="tabs__panel" id="dl-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_description-list.scss */
+
+.description-list { font-family: var(--font-sans); }
+.description-list__header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: var(--space-5); margin-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border-light);
+}
+.description-list__title { font-size: 1.125rem; font-weight: var(--font-weight-semibold); color: var(--color-text-strong); }
+.description-list__rows { display: flex; flex-direction: column; gap: var(--space-5); }
+.description-list__row { display: flex; }
+.description-list__label { width: 180px; flex-shrink: 0; font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text-light); }
+.description-list__value { flex: 1; font-size: var(--font-size-sm); color: var(--color-text-strong); }
+.description-list__value--muted { color: var(--color-text-muted); font-style: italic; }
+.description-list__value--bold { font-weight: var(--font-weight-semibold); }
+.description-list__value--long { color: var(--color-text); line-height: var(--leading-relaxed); }
+.description-list__value a { color: var(--color-primary); text-decoration: none; }
+.description-list__tags { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.description-list__date-time { color: var(--color-text-muted); }</code></pre>
+            </div>
+            <details class="agent-instructions">
+                <summary>Instrukcje dla agenta</summary>
+                <pre><code># Description List — scss/_description-list.scss → .description-list
+
+.description-list
+  .description-list__header → tytuł + opcjonalny przycisk
+    h3.description-list__title
+    button.admin-btn--outline--small
+  dl.description-list__rows → gap: --space-5, bez borderów
+    .description-list__row → display: flex
+      dt.description-list__label → 180px, --color-text-light
+      dd.description-list__value → flex: 1
+
+Modyfikatory wartości:
+- --bold — cena, ważne
+- --muted — puste ("Brak"), italic
+- --long — długi tekst, leading-relaxed
+- &lt;a&gt; wewnątrz __value → --color-primary
+- div.description-list__tags → flex wrap z badge'ami
+- span.description-list__date-time → muted fragment</code></pre>
+            </details>
+
+        </article>
+
+        <article id="content-section" class="component">
+            <h2 class="component__title">Content Section</h2>
+
+            <div class="tabs" style="margin-top: -8px;">
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'cs-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'cs-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'cs-css')">CSS</button>
+            </div>
+            <div class="tabs__panel tabs__panel--active" id="cs-preview">
+                <div class="example" style="flex-direction: column;">
+                    <div class="example__preview" style="width: 100%; max-width: 100%; padding: 40px 48px;">
+                        <div style="display: flex; flex-direction: column; gap: 48px; width: 100%;">
+
+                            <div class="content-section">
+                                <div class="content-section__header">
+                                    <h3 class="content-section__title">Informacje ogólne</h3>
+                                </div>
+                                <p style="font-size: var(--font-size-sm); color: var(--color-text); line-height: var(--leading-relaxed);">Artysta urodzony w 1975 roku w Berlinie. Jego prace łączą abstrakcję geometryczną z elementami street artu. Technika mieszana na płótnie, często w dużych formatach powyżej 150 cm.</p>
+                            </div>
+
+                            <div class="content-section">
+                                <div class="content-section__header">
+                                    <h3 class="content-section__title">Szczegóły dzieła</h3>
+                                    <button class="admin-btn admin-btn--outline admin-btn--small">Edytuj</button>
+                                </div>
+                                <dl class="description-list__rows">
+                                    <div class="description-list__row"><dt class="description-list__label">Artysta</dt><dd class="description-list__value">Robert Lemke</dd></div>
+                                    <div class="description-list__row"><dt class="description-list__label">Technika</dt><dd class="description-list__value">Olej na płótnie</dd></div>
+                                    <div class="description-list__row"><dt class="description-list__label">Status</dt><dd class="description-list__value"><span class="admin-badge admin-badge--success">FREE</span></dd></div>
+                                    <div class="description-list__row"><dt class="description-list__label">Cena</dt><dd class="description-list__value description-list__value--bold">600 PLN</dd></div>
+                                </dl>
+                            </div>
+
+                            <div class="content-section">
+                                <div class="content-section__header">
+                                    <h3 class="content-section__title content-section__title--danger">Danger zone</h3>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div>
+                                        <div style="font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text-strong);">Usuń dzieło</div>
+                                        <div style="font-size: var(--font-size-sm); color: var(--color-text-muted); margin-top: 2px;">Tej operacji nie można cofnąć.</div>
+                                    </div>
+                                    <button class="admin-btn admin-btn--danger admin-btn--small">Usuń</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__panel" id="cs-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="content-section"&gt;
+  &lt;div class="content-section__header"&gt;
+    &lt;h3 class="content-section__title"&gt;Tytuł sekcji&lt;/h3&gt;
+    &lt;button class="admin-btn admin-btn--outline admin-btn--small"&gt;Akcja&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;!-- dowolna zawartość: tekst, description-list, formularz --&gt;
+&lt;/div&gt;
+
+&lt;!-- Danger zone --&gt;
+&lt;div class="content-section"&gt;
+  &lt;div class="content-section__header"&gt;
+    &lt;h3 class="content-section__title content-section__title--danger"&gt;Danger zone&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;!-- zawartość --&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="tabs__panel" id="cs-css">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_content-section.scss */
+
+.content-section {
+  font-family: var(--font-sans);
+  max-width: 640px;
+}
+.content-section__header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+.content-section__title {
+  font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted); text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+.content-section__title--danger { color: var(--color-danger); }
+.content-section + .content-section { margin-top: var(--space-8); }</code></pre>
+            </div>
+            <details class="agent-instructions">
+                <summary>Instrukcje dla agenta</summary>
+                <pre><code># Content Section — scss/_content-section.scss → .content-section
+
+.content-section → max-width: 640px
+  .content-section__header → flex, space-between
+    h3.content-section__title → uppercase label, --color-text-muted
+    button.admin-btn--outline--small → opcjonalny
+  (dowolna zawartość: tekst, description-list, formularz, galeria)
+
+Uwagi:
+- .content-section + .content-section → auto margin-top: --space-8 (48px)
+- Danger zone: content-section__title--danger na tytule
+- Zawartość to dowolny HTML — sekcja jest kontenerem, nie narzuca layoutu</code></pre>
+            </details>
+
+        </article>
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('patterns')</script>
+<script>
+function switchTab(btn, panelId) {
+    const tabsBar = btn.closest('.tabs');
+    const container = tabsBar.parentElement;
+    // Reset only sibling tabs and panels at this level
+    tabsBar.querySelectorAll('.tabs__btn').forEach(b => b.classList.remove('tabs__btn--active'));
+    btn.classList.add('tabs__btn--active');
+    // Find sibling panels (direct children of same container that follow this .tabs)
+    let sibling = tabsBar.nextElementSibling;
+    while (sibling && sibling.classList.contains('tabs__panel')) {
+        sibling.classList.remove('tabs__panel--active');
+        sibling = sibling.nextElementSibling;
+    }
+    document.getElementById(panelId).classList.add('tabs__panel--active');
+}
+</script>
+</body>
+</html>

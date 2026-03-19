@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White — Design Tokens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar__logo">White</div>
+    <nav class="sidebar__nav" id="nav"></nav>
+    <div class="sidebar__footer">
+        White Design System
+    </div>
+</aside>
+
+<main class="content">
+
+    <section id="tokens" class="section">
+        <h1 class="section__title">Design Tokens</h1>
+        <p class="section__desc">Bazowe wartości panelu administracyjnego.</p>
+
+        <h2 class="subsection__title">Primitive colors</h2>
+        <h3 style="font-size: 14px; font-weight: 500; color: var(--color-text-light); margin-bottom: 12px;">Blue</h3>
+        <div class="swatch-grid">
+            <div class="swatch">
+                <div class="swatch__color" style="background: #056DFF"></div>
+                <div class="swatch__info">
+                    <strong>blue-500</strong>
+                    <code>#056DFF</code>
+                    <code>rgba(5, 109, 255, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #044AD4"></div>
+                <div class="swatch__info">
+                    <strong>blue-600</strong>
+                    <code>#044AD4</code>
+                    <code>rgba(4, 74, 212, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: rgba(5,109,255,0.06)"></div>
+                <div class="swatch__info">
+                    <strong>blue-50</strong>
+                    <code>#EFF5FF</code>
+                    <code>rgba(5, 109, 255, 0.06)</code>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 14px; font-weight: 500; color: var(--color-text-light); margin: 20px 0 12px;">Red</h3>
+        <div class="swatch-grid">
+            <div class="swatch">
+                <div class="swatch__color" style="background: #dc2626"></div>
+                <div class="swatch__info">
+                    <strong>red-500</strong>
+                    <code>#dc2626</code>
+                    <code>rgba(220, 38, 38, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #fef2f2"></div>
+                <div class="swatch__info">
+                    <strong>red-50</strong>
+                    <code>#fef2f2</code>
+                    <code>rgba(254, 242, 242, 1)</code>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 14px; font-weight: 500; color: var(--color-text-light); margin: 20px 0 12px;">Green</h3>
+        <div class="swatch-grid">
+            <div class="swatch">
+                <div class="swatch__color" style="background: #16a34a"></div>
+                <div class="swatch__info">
+                    <strong>green-500</strong>
+                    <code>#16a34a</code>
+                    <code>rgba(22, 163, 74, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #dcfce7"></div>
+                <div class="swatch__info">
+                    <strong>green-50</strong>
+                    <code>#dcfce7</code>
+                    <code>rgba(220, 252, 231, 1)</code>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 14px; font-weight: 500; color: var(--color-text-light); margin: 20px 0 12px;">Amber</h3>
+        <div class="swatch-grid">
+            <div class="swatch">
+                <div class="swatch__color" style="background: #d97706"></div>
+                <div class="swatch__info">
+                    <strong>amber-500</strong>
+                    <code>#d97706</code>
+                    <code>rgba(217, 119, 6, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #fffbeb"></div>
+                <div class="swatch__info">
+                    <strong>amber-50</strong>
+                    <code>#fffbeb</code>
+                    <code>rgba(255, 251, 235, 1)</code>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 14px; font-weight: 500; color: var(--color-text-light); margin: 20px 0 12px;">Gray</h3>
+        <div class="swatch-grid">
+            <div class="swatch">
+                <div class="swatch__color" style="background: #0a0a0a"></div>
+                <div class="swatch__info">
+                    <strong>gray-900</strong>
+                    <code>#0a0a0a</code>
+                    <code>rgba(10, 10, 10, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #33393e"></div>
+                <div class="swatch__info">
+                    <strong>gray-800</strong>
+                    <code>#33393e</code>
+                    <code>rgba(51, 57, 62, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #696a70"></div>
+                <div class="swatch__info">
+                    <strong>gray-700</strong>
+                    <code>#696a70</code>
+                    <code>rgba(105, 106, 112, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #6b7280"></div>
+                <div class="swatch__info">
+                    <strong>gray-500</strong>
+                    <code>#6b7280</code>
+                    <code>rgba(107, 114, 128, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #99a0a7"></div>
+                <div class="swatch__info">
+                    <strong>gray-400</strong>
+                    <code>#99a0a7</code>
+                    <code>rgba(153, 160, 167, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #c5cace"></div>
+                <div class="swatch__info">
+                    <strong>gray-300</strong>
+                    <code>#c5cace</code>
+                    <code>rgba(197, 202, 206, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #e3e8ee"></div>
+                <div class="swatch__info">
+                    <strong>gray-200</strong>
+                    <code>#e3e8ee</code>
+                    <code>rgba(227, 232, 238, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #eaedf0"></div>
+                <div class="swatch__info">
+                    <strong>gray-150</strong>
+                    <code>#eaedf0</code>
+                    <code>rgba(234, 237, 240, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #f3f4f6"></div>
+                <div class="swatch__info">
+                    <strong>gray-100</strong>
+                    <code>#f3f4f6</code>
+                    <code>rgba(243, 244, 246, 1)</code>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch__color" style="background: #f8f9fb"></div>
+                <div class="swatch__info">
+                    <strong>gray-50</strong>
+                    <code>#f8f9fb</code>
+                    <code>rgba(248, 249, 251, 1)</code>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="subsection__title">Theme</h2>
+        <table class="spec-table">
+            <tr><th>Token</th><th>Wartość</th><th>Użycie</th></tr>
+            <tr><td><code>--color-primary</code></td><td><code>blue-500</code></td><td>Akcje, linki, focus</td></tr>
+            <tr><td><code>--color-danger</code></td><td><code>red-500</code></td><td>Usuwanie, błędy</td></tr>
+            <tr><td><code>--color-success</code></td><td><code>green-500</code></td><td>Potwierdzenia, statusy</td></tr>
+            <tr><td><code>--color-warning</code></td><td><code>amber-500</code></td><td>Ostrzeżenia</td></tr>
+            <tr><td><code>--color-text</code></td><td><code>gray-800</code></td><td>Tekst domyślny</td></tr>
+            <tr><td><code>--color-text-strong</code></td><td><code>gray-900</code></td><td>Nagłówki, bold</td></tr>
+            <tr><td><code>--color-text-muted</code></td><td><code>gray-400</code></td><td>Placeholder, caption</td></tr>
+            <tr><td><code>--color-border-default</code></td><td><code>gray-200</code></td><td>Inputy, karty</td></tr>
+            <tr><td><code>--color-border-light</code></td><td><code>gray-150</code></td><td>Separatory, subtle</td></tr>
+            <tr><td><code>--color-bg</code></td><td><code>white</code></td><td>Tło kart, inputów</td></tr>
+            <tr><td><code>--color-bg-page</code></td><td><code>gray-50</code></td><td>Tło strony</td></tr>
+            <tr><td><code>--color-bg-muted</code></td><td><code>gray-100</code></td><td>Hover, secondary bg</td></tr>
+        </table>
+
+        <h2 class="subsection__title">Typography</h2>
+        <table class="spec-table">
+            <tr><th>Token</th><th>Wartość</th></tr>
+            <tr><td><code>--font-sans</code></td><td><code>sohne-var → Helvetica Neue → system</code></td></tr>
+            <tr><td><code>--font-doc</code></td><td><code>Inter → system</code></td></tr>
+            <tr><td><code>--font-size-lg</code></td><td><code>1.0625rem</code> <small>(17px)</small></td></tr>
+            <tr><td><code>--font-size-base</code></td><td><code>1rem</code> <small>(16px)</small></td></tr>
+            <tr><td><code>--font-size-md</code></td><td><code>0.9375rem</code> <small>(15px)</small></td></tr>
+            <tr><td><code>--font-size-sm</code></td><td><code>0.875rem</code> <small>(14px)</small></td></tr>
+            <tr><td><code>--font-size-caption</code></td><td><code>0.8125rem</code> <small>(13px)</small></td></tr>
+            <tr><td><code>--font-size-xs</code></td><td><code>0.75rem</code> <small>(12px)</small></td></tr>
+            <tr><td><code>--font-size-2xs</code></td><td><code>0.625rem</code> <small>(10px)</small></td></tr>
+            <tr><td><code>--letter-spacing-wide</code></td><td><code>0.5px</code></td></tr>
+            <tr><td><code>--font-weight-regular</code></td><td><code>400</code></td></tr>
+            <tr><td><code>--font-weight-medium</code></td><td><code>500</code></td></tr>
+            <tr><td><code>--font-weight-semibold</code></td><td><code>600</code></td></tr>
+            <tr><td><code>--font-weight-bold</code></td><td><code>700</code></td></tr>
+            <tr><td><code>--leading-tight</code></td><td><code>1.3</code></td></tr>
+            <tr><td><code>--leading-snug</code></td><td><code>1.4</code></td></tr>
+            <tr><td><code>--leading-normal</code></td><td><code>1.5</code></td></tr>
+            <tr><td><code>--leading-relaxed</code></td><td><code>1.6</code></td></tr>
+        </table>
+
+        <h2 class="subsection__title">Borders</h2>
+        <table class="spec-table">
+            <tr><th>Token</th><th>Wartość</th><th>Użycie</th></tr>
+            <tr><td><code>--border-width</code></td><td><code>1px</code></td><td>Domyślna grubość</td></tr>
+            <tr><td><code>--border-width-thick</code></td><td><code>1.5px</code></td><td>Checkbox, badge</td></tr>
+            <tr><td><code>--border-field</code></td><td><code>1px solid --color-border-default</code></td><td>Input, select, textarea</td></tr>
+            <tr><td><code>--border-control</code></td><td><code>1px solid --color-border</code></td><td>Outline button</td></tr>
+            <tr><td><code>--border-checkbox</code></td><td><code>1.5px solid --color-border</code></td><td>Checkbox</td></tr>
+        </table>
+
+        <h2 class="subsection__title">Border Radius</h2>
+        <div class="radius-demo">
+            <div class="radius-demo__item">
+                <div class="radius-demo__box" style="border-radius: 6px">6px</div>
+                <span><code>--radius-field</code> <small>6px</small></span>
+            </div>
+            <div class="radius-demo__item">
+                <div class="radius-demo__box" style="border-radius: 12px">12px</div>
+                <span><code>--radius-button</code> <small>12px</small></span>
+            </div>
+            <div class="radius-demo__item">
+                <div class="radius-demo__box" style="border-radius: 9999px; width: 100px;">pill</div>
+                <span><code>--radius-pill</code> <small>9999px</small></span>
+            </div>
+            <div class="radius-demo__item">
+                <div class="radius-demo__box" style="border-radius: 50%">50%</div>
+                <span>Circle: <code>50%</code></span>
+            </div>
+        </div>
+
+        <h2 class="subsection__title">Spacing</h2>
+        <table class="spec-table">
+            <tr><th>Token</th><th>Wartość</th><th>px</th></tr>
+            <tr><td><code>--space-0-5</code></td><td><code>0.125rem</code></td><td>2px</td></tr>
+            <tr><td><code>--space-1</code></td><td><code>0.1875rem</code></td><td>3px</td></tr>
+            <tr><td><code>--space-1-5</code></td><td><code>0.25rem</code></td><td>4px</td></tr>
+            <tr><td><code>--space-2</code></td><td><code>0.375rem</code></td><td>6px</td></tr>
+            <tr><td><code>--space-2-5</code></td><td><code>0.4375rem</code></td><td>7px</td></tr>
+            <tr><td><code>--space-3</code></td><td><code>0.5rem</code></td><td>8px</td></tr>
+            <tr><td><code>--space-3-5</code></td><td><code>0.625rem</code></td><td>10px</td></tr>
+            <tr><td><code>--space-4</code></td><td><code>0.75rem</code></td><td>12px</td></tr>
+            <tr><td><code>--space-4-5</code></td><td><code>0.875rem</code></td><td>14px</td></tr>
+            <tr><td><code>--space-5</code></td><td><code>1rem</code></td><td>16px</td></tr>
+            <tr><td><code>--space-6</code></td><td><code>1.5rem</code></td><td>24px</td></tr>
+            <tr><td><code>--space-7</code></td><td><code>2rem</code></td><td>32px</td></tr>
+            <tr><td><code>--space-8</code></td><td><code>3rem</code></td><td>48px</td></tr>
+        </table>
+
+        <h2 class="subsection__title">Sizing</h2>
+        <table class="spec-table">
+            <tr><th>Token</th><th>Wartość</th><th>Użycie</th></tr>
+            <tr><td><code>--height-control</code></td><td><code>44px</code></td><td>Button, input, select</td></tr>
+            <tr><td><code>--height-control-sm</code></td><td><code>32px</code></td><td>Small button</td></tr>
+            <tr><td><code>--height-control-lg</code></td><td><code>50px</code></td><td>Large button</td></tr>
+        </table>
+
+        <h2 class="subsection__title">Shadows</h2>
+        <div class="shadow-demo">
+            <div class="shadow-demo__item" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08)">
+                <strong>shadow-sm</strong><br><code>0 1px 3px rgba(0,0,0,0.08)</code>
+            </div>
+            <div class="shadow-demo__item" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1)">
+                <strong>shadow-md</strong><br><code>0 4px 12px rgba(0,0,0,0.1)</code>
+            </div>
+            <div class="shadow-demo__item" style="box-shadow: 0 8px 24px rgba(0,0,0,0.12)">
+                <strong>shadow-lg</strong><br><code>0 8px 24px rgba(0,0,0,0.12)</code>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="nav.js"></script>
+<script>renderNav('tokens')</script>
+</body>
+</html>
