@@ -31,7 +31,7 @@ scss/               — SCSS source do kompilacji white.css
   _image-gallery.scss — .image-gallery
   _description-list.scss — .description-list
   _content-section.scss  — .content-section
-  _tabs.scss        — .tabs-underline, .tabs-pill
+  _tabs.scss        — .tabs-underline, .tabs-soft, .tabs-pill
 
 dist/
   white.css         — skompilowany CSS do użycia w projektach
@@ -53,12 +53,13 @@ dist/
 - **Description List** — bez borderów między wierszami, sam spacing (`--space-5` gap)
 - **SCSS jako dystrybuowany CSS** — tokeny jako CSS custom properties (nie Sass vars) żeby override'y działały w runtime. Projekty konsumujące importują `white.css` i używają klas BEM
 - **Instrukcje agenta** — zamiast tabów Human/Machine, zwijany `<details class="agent-instructions">` pod każdym patternem. Domyślnie zamknięty. Style w styles.css. Human widok: taby Preview/HTML/CSS per przykład
-- **Tabs** — `.tabs-underline` (kreska 2px, gap --space-6). SCSS w `_tabs.scss`
-- **Pill Select** — `.tabs-pill` (segment control, bg-muted kontener, active = biały + shadow). Przeniesiony z patterns do forms.html. SCSS w `_tabs.scss`
+- **Tabs** — dwa warianty w patterns.html: `.tabs-underline` (kreska 2px, gap --space-6) i `.tabs-soft` (bg fill + kreska, bogatszy niż underline). Kreska active w soft = `--color-border` (subtelna, nie czarna). SCSS w `_tabs.scss`
+- **Pill Select** — `.tabs-pill` (segment control, bg-muted kontener, active = biały + shadow). Przeniesiony z patterns do forms.html jako komponent formularza (multiselect z małą liczbą opcji). SCSS w `_tabs.scss`
+- **Kolory primitive** — 9 chromatic: blue, red, green, amber, purple, pink, teal, lime + gray. Dobrane przez max rozstrzał na kole barw (~41° avg gap). Każdy ma wariant 500 (saturated) i 50 (tinted bg)
 - **Icons** — osobna strona `icons.html` z inline SVG (działa z file://). Sprite `icons.svg` z `<symbol>` do `<use href>` (wymaga HTTP). Styl Feather/Lucide, stroke 1.5px, currentColor
 - **Sidebar przeniesiony** — z layout.html do patterns.html jako reużywalny pattern. Klasy `admin-sidebar-preview` w styles.css (legacy, nie w SCSS jeszcze)
 - **Dogfooding** — podglądy w patterns.html używają klas z `dist/white.css` (nie inline styles). `patterns.html` importuje `dist/white.css` obok `styles.css`
-- **Refaktoring patterns** — usunięty `<style>` blok z Item List, usunięte wszystkie spec tables, inline styles zamienione na klasy BEM. Klasy `ex-product-*` → `item-list__*`
+- **Item List** — dawniej Product List, przemianowany na bardziej generyczny. Klasy `.item-list__*` w `_item-list.scss`
 
 ## Gotchas
 
@@ -66,7 +67,8 @@ dist/
 - **`.example__spec` border** — przy column layout trzeba inline: `border-left: none; border-top: 1px solid var(--color-border-light)`
 - **nav.js separator** — obiekty `{ separator: true }` w tablicy pages, renderNav musi mieć `continue`
 - **nav.js collapsible** — parent z children → `<button class="sidebar__toggle">` z chevronem. Aktywna strona = domyślnie otwarta
-- **switchTab()** — w patterns.html, scoped do `.tabs` parent (`btn.closest('.tabs')`), szuka sibling paneli. Obsługuje zagnieżdżone taby (Preview/HTML/CSS). Style doc-tabów (`.tabs`, `.tabs__btn`) w styles.css — to NIE to samo co `.tabs-underline`/`.tabs-pill` z white.css
+- **switchTab()** — w patterns.html, scoped do `.tabs` parent (`btn.closest('.tabs')`), szuka sibling paneli. Obsługuje zagnieżdżone taby (Preview/HTML/CSS). Style doc-tabów (`.tabs`, `.tabs__btn`) w styles.css — to NIE to samo co `.tabs-underline`/`.tabs-soft`/`.tabs-pill` z white.css
+- **Sidebar scroll** — `.sidebar__nav` wymaga `flex: 1; overflow-y: auto` żeby menu scrollowało gdy jest dłuższe niż viewport
 - **SVG sprite file://** — `<use href="icons.svg#...">` NIE działa z `file://` (CORS). Dlatego icons.html ma inline SVG. Na serwerze HTTP sprite działa OK
 - **sass** — dostępny globalnie `/usr/local/bin/sass`
 - **page-header width** — `.page-header` wymaga `width: 100%` aby `space-between` działał wewnątrz `.example__preview` (flex container z `flex-wrap: wrap`)
