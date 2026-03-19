@@ -23,7 +23,7 @@ const pages = [
     { href: 'patterns.html', id: 'patterns', label: 'Patterns', children: [
         { href: 'patterns.html#tabs', label: 'Tabs' },
         { href: 'patterns.html#sidebar', label: 'Sidebar' },
-        { href: 'patterns.html#product-list', label: 'Product List' },
+        { href: 'patterns.html#item-list', label: 'Item List' },
         { href: 'patterns.html#page-header', label: 'Page Header' },
         { href: 'patterns.html#image-gallery', label: 'Image Gallery' },
         { href: 'patterns.html#description-list', label: 'Description List' },

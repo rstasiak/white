@@ -14,7 +14,7 @@ forms.html          — Buttons, Inputs, Selects, Checkboxes & Toggles
 badges.html         — Badge warianty (outlined/filled), rozmiary, kolory
 list-cards.html     — List Row, Kebab Menu
 layout.html         — Desktop, Widescreen, Mobile, Content Layouts
-patterns.html       — Tabs, Sidebar, Page Header, Product List, Image Gallery, Description List, Content Section
+patterns.html       — Tabs, Sidebar, Page Header, Item List, Image Gallery, Description List, Content Section
 styles.css          — Style dokumentacji White + tokeny + komponenty (legacy, monolityczny)
 nav.js              — Sidebar nawigacja (collapsible grupy, separatory, chevron toggle)
 
@@ -26,7 +26,7 @@ scss/               — SCSS source do kompilacji white.css
   _badges.scss      — .admin-badge
   _checkbox.scss    — .admin-checkbox, .admin-toggle
   _kebab.scss       — .admin-kebab
-  _product-list.scss — .product-list
+  _item-list.scss   — .item-list
   _page-header.scss — .page-header
   _image-gallery.scss — .image-gallery
   _description-list.scss — .description-list
@@ -57,7 +57,7 @@ dist/
 - **Icons** — osobna strona `icons.html` z inline SVG (działa z file://). Sprite `icons.svg` z `<symbol>` do `<use href>` (wymaga HTTP). Styl Feather/Lucide, stroke 1.5px, currentColor
 - **Sidebar przeniesiony** — z layout.html do patterns.html jako reużywalny pattern. Klasy `admin-sidebar-preview` w styles.css (legacy, nie w SCSS jeszcze)
 - **Dogfooding** — podglądy w patterns.html używają klas z `dist/white.css` (nie inline styles). `patterns.html` importuje `dist/white.css` obok `styles.css`
-- **Refaktoring patterns** — usunięty `<style>` blok z Product List, usunięte wszystkie spec tables, inline styles zamienione na klasy BEM. Klasy `ex-product-*` → `product-list__*`
+- **Refaktoring patterns** — usunięty `<style>` blok z Item List, usunięte wszystkie spec tables, inline styles zamienione na klasy BEM. Klasy `ex-product-*` → `item-list__*`
 
 ## Gotchas
 
