@@ -73,7 +73,7 @@ dist/
 ## Tokeny (styles.css :root)
 
 ### Kolory
-- Primitive: `--blue-500/600/50`, `--red-500/50`, `--green-500/50`, `--amber-500/50`, `--gray-900..50`
+- Primitive: `--blue-500/600/50`, `--red-500/50`, `--green-500/50`, `--amber-500/50`, `--purple-500/50`, `--pink-500/50`, `--teal-500/50`, `--lime-500/50`, `--gray-900..50`
 - Theme: `--color-primary`, `--color-primary-hover`, `--color-danger`, `--color-success`, `--color-warning`
 - Text: `--color-text`, `--color-text-strong`, `--color-text-light`, `--color-text-muted`
 - Border: `--color-border`, `--color-border-light`, `--color-border-default`
