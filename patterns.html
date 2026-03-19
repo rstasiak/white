@@ -77,55 +77,56 @@
 }</code></pre>
             </div>
 
-            <h3 class="subsection__title">Pill</h3>
+            <h3 class="subsection__title">Soft</h3>
             <div class="tabs" style="margin-top: -8px;">
-                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'tab-pill-preview')">Preview</button>
-                <button class="tabs__btn" onclick="switchTab(this, 'tab-pill-html')">HTML</button>
-                <button class="tabs__btn" onclick="switchTab(this, 'tab-pill-css')">CSS</button>
+                <button class="tabs__btn tabs__btn--active" onclick="switchTab(this, 'tab-sf-preview')">Preview</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'tab-sf-html')">HTML</button>
+                <button class="tabs__btn" onclick="switchTab(this, 'tab-sf-css')">CSS</button>
             </div>
-            <div class="tabs__panel tabs__panel--active" id="tab-pill-preview">
+            <div class="tabs__panel tabs__panel--active" id="tab-sf-preview">
                 <div class="example" style="flex-direction: column;">
                     <div class="example__preview" style="width: 100%; max-width: 100%; padding: 32px 40px; flex-direction: column; gap: 24px;">
-                        <div class="tabs-pill">
-                            <button class="tabs-pill__item tabs-pill__item--active">Wszystkie</button>
-                            <button class="tabs-pill__item">Aktywne</button>
-                            <button class="tabs-pill__item">Drafty</button>
-                            <button class="tabs-pill__item">Archiwum</button>
+                        <div class="tabs-soft">
+                            <button class="tabs-soft__item tabs-soft__item--active">Wszystkie</button>
+                            <button class="tabs-soft__item">Aktywne</button>
+                            <button class="tabs-soft__item">Drafty</button>
+                            <button class="tabs-soft__item">Archiwum</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tabs__panel" id="tab-pill-html">
-                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="tabs-pill"&gt;
-  &lt;button class="tabs-pill__item tabs-pill__item--active"&gt;Wszystkie&lt;/button&gt;
-  &lt;button class="tabs-pill__item"&gt;Aktywne&lt;/button&gt;
-  &lt;button class="tabs-pill__item"&gt;Drafty&lt;/button&gt;
-  &lt;button class="tabs-pill__item"&gt;Archiwum&lt;/button&gt;
+            <div class="tabs__panel" id="tab-sf-html">
+                <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>&lt;div class="tabs-soft"&gt;
+  &lt;button class="tabs-soft__item tabs-soft__item--active"&gt;Wszystkie&lt;/button&gt;
+  &lt;button class="tabs-soft__item"&gt;Aktywne&lt;/button&gt;
+  &lt;button class="tabs-soft__item"&gt;Drafty&lt;/button&gt;
+  &lt;button class="tabs-soft__item"&gt;Archiwum&lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </div>
-            <div class="tabs__panel" id="tab-pill-css">
+            <div class="tabs__panel" id="tab-sf-css">
                 <pre style="font-size: 12px; background: var(--color-bg); border: 1px solid var(--color-border-light); border-radius: var(--radius-card); padding: 24px; overflow-x: auto; line-height: 1.7;"><code>/* scss/_tabs.scss */
 
-.tabs-pill {
-  display: flex; gap: var(--space-1-5);
-  background: var(--color-bg-muted);
-  border-radius: var(--radius-button);
-  padding: var(--space-1-5);
-  width: fit-content; font-family: var(--font-sans);
+.tabs-soft {
+  display: flex; gap: var(--space-1);
+  font-family: var(--font-sans);
+  border-bottom: 1px solid var(--color-border-light);
+  padding-bottom: var(--space-1-5);
 }
-.tabs-pill__item {
-  padding: var(--space-2) var(--space-5);
+.tabs-soft__item {
+  padding: var(--space-2) var(--space-4);
   font-size: var(--font-size-sm); font-weight: var(--font-weight-medium);
   color: var(--color-text-muted);
   background: none; border: none;
-  border-radius: calc(var(--radius-button) - var(--space-1-5));
+  border-radius: var(--radius-field);
   cursor: pointer;
 }
-.tabs-pill__item:hover { color: var(--color-text); }
-.tabs-pill__item--active {
+.tabs-soft__item:hover {
+  color: var(--color-text);
+  background: var(--color-bg-muted);
+}
+.tabs-soft__item--active {
   color: var(--color-text-strong);
-  background: var(--color-bg);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background: var(--color-bg-muted);
 }</code></pre>
             </div>
 
@@ -133,25 +134,26 @@
                 <summary>Instrukcje dla agenta</summary>
                 <pre><code># Tabs — scss/_tabs.scss
 
-Dwa warianty: .tabs-underline i .tabs-pill
-
 ## Underline
 .tabs-underline
   button.tabs-underline__item (--active)
 - Kreska 2px pod aktywnym, border-bottom na kontenerze
 - Gap: --space-6 między tabami
 
-## Pill
-.tabs-pill → kontener z --color-bg-muted, border-radius
-  button.tabs-pill__item (--active)
-- Aktywny: biały bg + subtle shadow
-- Wygląda jak segment control
-- width: fit-content — nie rozciąga się
+## Soft
+.tabs-soft
+  button.tabs-soft__item (--active)
+- Aktywny: subtle bg fill (--color-bg-muted), rounded (--radius-field)
+- Brak kontenera bg (w odróżnieniu od pill)
+- Tight gap (--space-1), compact padding
+- Hover = taki sam bg jak active
 
 Uwagi:
 - Oba warianty używają &lt;button&gt;, nie &lt;a&gt;
 - Aktywny tab: --color-text-strong, reszta: --color-text-muted
-- JS: przełączanie klasy --active + pokazywanie paneli</code></pre>
+- JS: przełączanie klasy --active + pokazywanie paneli
+
+Pill Select (segment control) → przeniesiony do Forms (forms.html#pill-select)</code></pre>
             </details>
 
         </article>

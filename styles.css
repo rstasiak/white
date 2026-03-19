@@ -175,6 +175,8 @@ body {
     flex-direction: column;
     padding: 16px 0;
     flex: 1;
+    overflow-y: auto;
+    flex: 1;
 }
 
 .sidebar__link {

@@ -8,6 +8,7 @@ const pages = [
         { href: 'forms.html#selects', label: 'Selects' },
         { href: 'forms.html#checkboxes', label: 'Checkboxes & Toggles' },
         { href: 'forms.html#custom-select', label: 'Custom Select' },
+        { href: 'forms.html#pill-select', label: 'Pill Select' },
     ]},
     { href: 'badges.html', id: 'badges', label: 'Badges' },
     { href: 'list-cards.html', id: 'list-cards', label: 'List Cards', children: [

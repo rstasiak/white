@@ -653,6 +653,35 @@ input:checked + .admin-toggle__track::after {
   border-bottom-color: var(--color-text-strong);
 }
 
+.tabs-soft {
+  display: flex;
+  gap: var(--space-1);
+  font-family: var(--font-sans);
+  border-bottom: 1px solid var(--color-border-light);
+}
+.tabs-soft__item {
+  padding: var(--space-2) var(--space-4);
+  margin-bottom: -1px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: var(--radius-field) var(--radius-field) 0 0;
+  cursor: var(--cursor-action);
+  transition: all var(--duration-normal) var(--ease);
+}
+.tabs-soft__item:hover {
+  color: var(--color-text);
+  background: var(--color-bg-muted);
+}
+.tabs-soft__item--active {
+  color: var(--color-text-strong);
+  background: var(--color-bg-muted);
+  border-bottom-color: var(--color-border);
+}
+
 .tabs-pill {
   display: flex;
   gap: var(--space-1-5);

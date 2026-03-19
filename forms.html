@@ -372,6 +372,34 @@
             </div>
         </article>
 
+        <!-- PILL SELECT -->
+        <article id="pill-select" class="component">
+            <h2 class="component__title">Pill Select</h2>
+
+            <div class="example" style="flex-direction: column;">
+                <div class="example__preview" style="flex-direction: column; gap: 24px;">
+                    <div class="tabs-pill">
+                        <button class="tabs-pill__item tabs-pill__item--active">Wszystkie</button>
+                        <button class="tabs-pill__item">Aktywne</button>
+                        <button class="tabs-pill__item">Drafty</button>
+                        <button class="tabs-pill__item">Archiwum</button>
+                    </div>
+                </div>
+                <div class="example__spec" style="border-left: none; border-top: 1px solid var(--color-border-light);">
+                    <h3>Pill Select</h3>
+                    <p style="margin-bottom: 12px;">Segment control do przełączania niewielkiej liczby opcji. Wizualnie jak iOS segmented control.</p>
+                    <table class="spec-table">
+                        <tr><td>Kontener</td><td><code>--color-bg-muted</code>, <code>--radius-button</code>, padding <code>--space-1-5</code></td></tr>
+                        <tr><td>Item padding</td><td><code>--space-2</code> / <code>--space-5</code></td></tr>
+                        <tr><td>Font</td><td><code>--font-size-sm</code>, <code>--font-weight-medium</code></td></tr>
+                        <tr><td>Inactive</td><td><code>--color-text-muted</code></td></tr>
+                        <tr><td>Active</td><td><code>--color-text-strong</code>, <code>--color-bg</code>, shadow <code>0 1px 3px</code></td></tr>
+                        <tr><td>Width</td><td><code>fit-content</code></td></tr>
+                    </table>
+                </div>
+            </div>
+        </article>
+
     </section>
 
 </main>

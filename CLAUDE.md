@@ -10,7 +10,7 @@ index.html          — Design Tokens (kolory, theme, typography, borders, radii
 typography.html     — Hierarchia typograficzna (H1-H3, Body, Small, Caption) + przegląd wizualny
 icons.html          — Katalog ikon SVG (inline, widoczne z file://), spec
 icons.svg           — SVG sprite z <symbol> (do użycia przez <use href> na serwerze HTTP)
-forms.html          — Buttons, Inputs, Selects, Checkboxes & Toggles
+forms.html          — Buttons, Inputs, Selects, Checkboxes & Toggles, Pill Select
 badges.html         — Badge warianty (outlined/filled), rozmiary, kolory
 list-cards.html     — List Row, Kebab Menu
 layout.html         — Desktop, Widescreen, Mobile, Content Layouts
@@ -53,7 +53,8 @@ dist/
 - **Description List** — bez borderów między wierszami, sam spacing (`--space-5` gap)
 - **SCSS jako dystrybuowany CSS** — tokeny jako CSS custom properties (nie Sass vars) żeby override'y działały w runtime. Projekty konsumujące importują `white.css` i używają klas BEM
 - **Instrukcje agenta** — zamiast tabów Human/Machine, zwijany `<details class="agent-instructions">` pod każdym patternem. Domyślnie zamknięty. Style w styles.css. Human widok: taby Preview/HTML/CSS per przykład
-- **Tabs** — dwa warianty: `.tabs-underline` (kreska 2px, gap --space-6) i `.tabs-pill` (segment control, bg-muted kontener, active = biały + shadow). SCSS w `_tabs.scss`
+- **Tabs** — `.tabs-underline` (kreska 2px, gap --space-6). SCSS w `_tabs.scss`
+- **Pill Select** — `.tabs-pill` (segment control, bg-muted kontener, active = biały + shadow). Przeniesiony z patterns do forms.html. SCSS w `_tabs.scss`
 - **Icons** — osobna strona `icons.html` z inline SVG (działa z file://). Sprite `icons.svg` z `<symbol>` do `<use href>` (wymaga HTTP). Styl Feather/Lucide, stroke 1.5px, currentColor
 - **Sidebar przeniesiony** — z layout.html do patterns.html jako reużywalny pattern. Klasy `admin-sidebar-preview` w styles.css (legacy, nie w SCSS jeszcze)
 - **Dogfooding** — podglądy w patterns.html używają klas z `dist/white.css` (nie inline styles). `patterns.html` importuje `dist/white.css` obok `styles.css`
